@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Antinote</title>
+    <title>Notelism</title>
     <link href="https://litenotes.github.io/publii/feed.xml" rel="self" />
     <link href="https://litenotes.github.io/publii" />
     <updated>2021-04-29T11:22:35+08:00</updated>
