@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://litenotes.github.io/publii/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://publii.pages.dev/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://litenotes.github.io/publii/</loc>
+<loc>https://publii.pages.dev/</loc>
 </url>
 <url>
-<loc>https://litenotes.github.io/publii/get-rid-of-the-following-five-misunderstandings-and-you-will-make-progress-faster/</loc>
+<loc>https://publii.pages.dev/get-rid-of-the-following-five-misunderstandings-and-you-will-make-progress-faster/</loc>
 <lastmod>2021-04-29T17:41:37+08:00</lastmod>
 </url>
 <url>
-<loc>https://litenotes.github.io/publii/how-to-learn-faster/</loc>
+<loc>https://publii.pages.dev/how-to-learn-faster/</loc>
 <lastmod>2021-04-29T11:22:35+08:00</lastmod>
 </url>
 <url>
-<loc>https://litenotes.github.io/publii/suggestions-in-writing/</loc>
+<loc>https://publii.pages.dev/suggestions-in-writing/</loc>
 <lastmod>2021-04-29T18:21:11+08:00</lastmod>
 </url>
 </urlset>
