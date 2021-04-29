@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>one</title>
+    <link href="https://github.com/litenotes/publii.git/feed.xml" rel="self" />
+    <link href="https://github.com/litenotes/publii.git" />
+    <updated>2021-04-29T09:04:02+08:00</updated>
+    <author>
+        <name>one</name>
+    </author>
+    <id>https://github.com/litenotes/publii.git</id>
+
+    <entry>
+        <title>Configure Cloudflare Pages with Publii</title>
+        <author>
+            <name>one</name>
+        </author>
+        <link href="https://github.com/litenotes/publii.git/111/"/>
+        <id>https://github.com/litenotes/publii.git/111/</id>
+
+        <updated>2021-04-29T09:04:02+08:00</updated>
+            <summary>
+                <![CDATA[
+                     All users of Cloudflare have access to Cloudflare Pages, which is an interesting alternative to regular static page hosting. And much like other hosting options with 'Page' at the end, we can use this service with Publii-based static websites in just a few simple&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__entry">
+<p>All users of Cloudflare have access to Cloudflare Pages, which is an interesting alternative to regular static page hosting. And much like other hosting options with 'Page' at the end, we can use this service with Publii-based static websites in just a few simple steps. </p>
+<h2 id="howitworks">How it works</h2>
+<p>Without going into too much detail, the function of Cloudflare Pages is fairly simple. Once it has been set-up, it will connect to your GitHub repository; from then, every time you make a change on GitHub, Cloudflare Pages rebuilds your website using the data from GitHub. As you can probably guess, this means that in order to configure Cloudflare Pages with Publii you'll need both a GitHub and Cloudflare account.</p>
+<h2 id="configuringyourgithubrepository">Configuring your GitHub repository</h2>
+<p>The first thing you'll need to do is ensure that you have created a GitHub repository for your website that Publii can use to upload changes to your site. This is a fairly easy process, and you can find a detailed step-by-step breakdown on how to do it in our article about [GitHub deployment]([https://getpublii.com/docs/host-static-website-github-pages.html](https://getpublii.com/docs/host-static-website-github-pages.html)).</p>
+<p class="msg msg--warning"><strong>Remember! </strong>As you won't actually be using GitHub Pages as the host of your site, you can create a Private repository rather than a Public repository. This will not have any effect on how your site performs on Cloudflare Pages, but it will prevent your website files being easily viewable as a repository on GitHub.</p>
+<p>Your Cloudflare Pages website domain will usually default to <strong>GITHUB_REPOSITORY_SLUG.pages.dev</strong>,  so use this when setting-up your server details in Publii to ensure a smooth first sync. If you would prefer to use a custom domain name, you'll find details of how to configure this later in this article.</p>
+<p>After setting up your GitHub repository, perform the first sync of your website to make sure that everything is working as it should; if the sync completes successfully, then you can move on to Cloudflare Pages configuration.</p>
+<h2 id="settingupcloudflarepages">Setting up Cloudflare Pages</h2>
+<p>Once your website is synced with GitHub, you can configure Cloudflare Pages.</p>
+<ol class="list-spaces">
+<li>Log in to your <a href="https://pages.cloudflare.com/" target="_blank" rel="nofollow noopener noreferrer">Cloudflare account</a> and select <strong>Pages</strong> from the right sidebar:
+<figure class="post__image"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54//cloudflare-select-pages.png" data-is-external-image="true"  alt="Cloudflare select Pages" width="1456" height="679" loading="lazy"></figure></figure>
+</li>
+<li>On the Pages screen, click on <strong>Create a new project</strong>:
+<figure class="post__image with-border"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54//cloudflare-create-project.png" data-is-external-image="true"  alt="Cloudflare Create a new Project" width="1456" height="679" loading="lazy"></figure></figure>
+</li>
+<li>On the next screen, click on <strong>Connect GitHub account</strong>:
+<figure class="post__image"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54//cloudflare-connect-github-project.png" data-is-external-image="true"  alt="Cloudflare Connect Github Project" width="1456" height="917" loading="lazy"></figure></figure>
+</li>
+<li>Here you'll see an authorization prompt, where you can select where the Cloudflare Pages app will have access on your GitHub account. You can restrict Cloudflare's access to only the repositories that you select here, so naturally you'll need to ensure your site's repository is selected. Once you've done this, click on <strong>Install &amp; Authorize</strong> to continue:
+<figure class="post__image"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/autorize-cloudflare-pages-2.png" data-is-external-image="true"  alt="Github Autorize Cloudflare Pages" width="1456" height="917" loading="lazy"></figure></figure>
+</li>
+<li>In the next step, specify the GitHub account and repository to be used for your site, then click <strong>Begin setup</strong>:
+<figure class="post__image"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/cloudflare-create-project-from-github.png" data-is-external-image="true"  alt="Cloduflare Create a project from your GitHub repository" width="1456" height="1386" loading="lazy"></figure></figure>
+<p>During setup, you can set the project name (this will be used to create a website URL in the <em>.pages.dev subdomain</em>). Also, a production branch must be specified (it will be most probably <strong>main</strong> or <strong>master</strong>). When this is all configured, click <strong>Save and Deploy</strong>:</p>
+<figure class="post__image"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/set-up-builds-and-deployments.png" data-is-external-image="true"  alt="Set up builds and deployments with Cloudflare" width="1456" height="2214" loading="lazy"></figure></figure>
+<p>The deployment process will start; be aware that this may take a few minutes to complete, so don't worry if it seems a little slow. After the deployment process finishes, you may visit your website using the link displayed over the status message:</p>
+<figure class="post__image"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/cloudflare-deployment-details.png" data-is-external-image="true"  alt="Cloudflare Deployment details" width="1456" height="1926" loading="lazy"></figure></figure>
+<p>And, of course, your website will also be visible on the main subdomain; in the example this would be <em>cp-test.pages.dev</em></p>
+</li>
+<li>You may now review the status of your website by going back to the project page:
+<figure class="post__image with-border"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/cloduflare-pages-status.png" data-is-external-image="true"  alt="Cloudflare Pages Status" width="1456" height="885" loading="lazy"></figure></figure>
+</li>
+</ol>
+<p>If the auto-generated subdomain name you entered earlier was correct, and your GitHub repository slug was available - then you're all done! Your website is now available through Cloudflare Pages.</p>
+<h2 id="howtosetupacustomdomainwithcloudflarepages">How to setup a custom domain with Cloudflare Pages?</h2>
+<p>If you want to use your custom domain name, just follow these steps:</p>
+<ol class="list-spaces">
+<li>Open the <strong>Custom domains</strong> tab in site settings, and then click <strong>Set up a custom domain</strong>:
+<figure class="post__image with-border"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/cloudflare-custom-domain.png" data-is-external-image="true"  alt="Cloudflare Custom Domain" width="1456" height="816" loading="lazy"></figure></figure>
+</li>
+<li>Enter the domain or subdomain which you want to use and click <strong>Continue</strong>:
+<figure class="post__image with-border"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/cloudflare-add-custom-domain-2.png" data-is-external-image="true"  alt="Cloudflare Add a Custom Domain" width="1456" height="876" loading="lazy"></figure></figure>
+</li>
+<li>The rest of the process will depend on your domain settings - you can use Cloudflare's DNS service or configure a domain via your DNS provider:
+<figure class="post__image with-border"><figure class="is-loaded"><img loading="lazy"  src="https://getpublii.com/docs/media/posts/54/cloudflare-setup-method.png" data-is-external-image="true"  alt="Cloudflare Setup Method" width="1456" height="1331" loading="lazy"></figure></figure>
+</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>Using Cloudflare Pages is quite simple, and it's even easier if you already have an existing deployment of your site on GitHub as you'll then only need to configure Cloudflare Pages to work with your existing GitHub account. But if you haven't yet created a GitHub repository you'll find the process is not too demanding, and by following the steps outlined in this and the GitHub repository article linked previously, you can be up and running in no time. </p>
+<p>As a final note, please do bear in mind that changes made to your website in Publii will not appear on the live site until a few minutes after each sync, as the whole process requires Cloudflare to sync up with GitHub first, and then run through its build process to actually update the site.</p>
+</div>
+<footer>
+<div class="post__footer-top">
+<div class="post__meta">Updated on: <time datetime="2021-03-17T06:35">March 17, 2021</time></div>
+</div>
+</footer>
+            ]]>
+        </content>
+    </entry>
+</feed>
