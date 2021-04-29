@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>one</title>
-    <link href="https://github.com/litenotes/publii.git/feed.xml" rel="self" />
-    <link href="https://github.com/litenotes/publii.git" />
+    <link href="https://litenotes.github.io/publii/feed.xml" rel="self" />
+    <link href="https://litenotes.github.io/publii" />
     <updated>2021-04-29T09:04:02+08:00</updated>
     <author>
         <name>one</name>
     </author>
-    <id>https://github.com/litenotes/publii.git</id>
+    <id>https://litenotes.github.io/publii</id>
 
     <entry>
         <title>Configure Cloudflare Pages with Publii</title>
         <author>
             <name>one</name>
         </author>
-        <link href="https://github.com/litenotes/publii.git/111/"/>
-        <id>https://github.com/litenotes/publii.git/111/</id>
+        <link href="https://litenotes.github.io/publii/111/"/>
+        <id>https://litenotes.github.io/publii/111/</id>
 
         <updated>2021-04-29T09:04:02+08:00</updated>
             <summary>
