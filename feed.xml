@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>NOTELISM</title>
-    <link href="https://notelism.com/feed.xml" rel="self" />
-    <link href="https://notelism.com" />
+    <link href="https://litenotes.github.io/publii/feed.xml" rel="self" />
+    <link href="https://litenotes.github.io/publii" />
     <updated>2021-05-05T22:36:32+08:00</updated>
     <author>
         <name>one</name>
     </author>
-    <id>https://notelism.com</id>
+    <id>https://litenotes.github.io/publii</id>
 
     <entry>
         <title>Use Zettelkasten to help with learning</title>
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/use-zettelkasten-to-help-with-learning/"/>
-        <id>https://notelism.com/use-zettelkasten-to-help-with-learning/</id>
+        <link href="https://litenotes.github.io/publii/use-zettelkasten-to-help-with-learning/"/>
+        <id>https://litenotes.github.io/publii/use-zettelkasten-to-help-with-learning/</id>
 
         <updated>2021-05-05T22:36:32+08:00</updated>
             <summary>
@@ -69,7 +69,7 @@ This technique is how Luhmann uses A6 paper to take notes and put them in a slid
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://notelism.com/media/posts/12/222.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://notelism.com/media/posts/12/responsive/222-xs.jpg 300w ,https://notelism.com/media/posts/12/responsive/222-sm.jpg 480w ,https://notelism.com/media/posts/12/responsive/222-md.jpg 768w ,https://notelism.com/media/posts/12/responsive/222-lg.jpg 1024w ,https://notelism.com/media/posts/12/responsive/222-xl.jpg 1360w ,https://notelism.com/media/posts/12/responsive/222-2xl.jpg 1600w"  height="284" width="1024" alt="" />
+      <img loading="lazy" src="https://litenotes.github.io/publii/media/posts/12/222.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://litenotes.github.io/publii/media/posts/12/responsive/222-xs.jpg 300w ,https://litenotes.github.io/publii/media/posts/12/responsive/222-sm.jpg 480w ,https://litenotes.github.io/publii/media/posts/12/responsive/222-md.jpg 768w ,https://litenotes.github.io/publii/media/posts/12/responsive/222-lg.jpg 1024w ,https://litenotes.github.io/publii/media/posts/12/responsive/222-xl.jpg 1360w ,https://litenotes.github.io/publii/media/posts/12/responsive/222-2xl.jpg 1600w"  height="284" width="1024" alt="" />
       
     </figure>
 
@@ -262,8 +262,8 @@ The two make progress synchronously under the complementary cooperative relation
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/fragmentation-learning-skills/"/>
-        <id>https://notelism.com/fragmentation-learning-skills/</id>
+        <link href="https://litenotes.github.io/publii/fragmentation-learning-skills/"/>
+        <id>https://litenotes.github.io/publii/fragmentation-learning-skills/</id>
 
         <updated>2021-05-05T22:03:13+08:00</updated>
             <summary>
@@ -387,8 +387,8 @@ When you are distracted, try abdominal breathing-slowly remove the air from your
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/how-to-read-effectively/"/>
-        <id>https://notelism.com/how-to-read-effectively/</id>
+        <link href="https://litenotes.github.io/publii/how-to-read-effectively/"/>
+        <id>https://litenotes.github.io/publii/how-to-read-effectively/</id>
             <category term="Study"/>
             <category term="Reading"/>
 
@@ -508,8 +508,8 @@ Taking a critical look at your own and other people's opinions will make it easi
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/five-effective-ways-to-cultivate-good-reading-habits/"/>
-        <id>https://notelism.com/five-effective-ways-to-cultivate-good-reading-habits/</id>
+        <link href="https://litenotes.github.io/publii/five-effective-ways-to-cultivate-good-reading-habits/"/>
+        <id>https://litenotes.github.io/publii/five-effective-ways-to-cultivate-good-reading-habits/</id>
             <category term="Study"/>
             <category term="Reading"/>
 
@@ -628,8 +628,8 @@ If not, it doesn't matter. Discover or create a place for reading on your own.
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/using-the-pyramid-principle-to-write-a-good-article/"/>
-        <id>https://notelism.com/using-the-pyramid-principle-to-write-a-good-article/</id>
+        <link href="https://litenotes.github.io/publii/using-the-pyramid-principle-to-write-a-good-article/"/>
+        <id>https://litenotes.github.io/publii/using-the-pyramid-principle-to-write-a-good-article/</id>
             <category term="Writing"/>
             <category term="Study"/>
 
@@ -783,21 +783,21 @@ For example, in this article, the title of "Why to use the Pyramid principle" is
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/about-reading/"/>
-        <id>https://notelism.com/about-reading/</id>
+        <link href="https://litenotes.github.io/publii/about-reading/"/>
+        <id>https://litenotes.github.io/publii/about-reading/</id>
             <category term="Study"/>
             <category term="Reading"/>
 
         <updated>2021-04-30T11:30:33+08:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://notelism.com/media/posts/6/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg" alt="" />
+                        <img src="https://litenotes.github.io/publii/media/posts/6/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg" alt="" />
                      Last year, I read very little, it is really a shame. But the reason for the lack of reading, one is too busy while two is gradually finding the "not reading" benefits.. In fact, during the “No reading”year, I thought more about reading.. You’d&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <img src="https://notelism.com/media/posts/6/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg" alt="" />
+                    <img src="https://litenotes.github.io/publii/media/posts/6/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg" alt="" />
                 
   <p>
     Last year, I read very little, it is really a shame. But the reason for the lack of reading, one is too busy while two is gradually finding the "not reading" benefits.. In fact, during the “No reading”year, I thought more about reading..
@@ -922,8 +922,8 @@ This is also one of the reasons why reading is "unnecessary".
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/suggestions-in-writing/"/>
-        <id>https://notelism.com/suggestions-in-writing/</id>
+        <link href="https://litenotes.github.io/publii/suggestions-in-writing/"/>
+        <id>https://litenotes.github.io/publii/suggestions-in-writing/</id>
             <category term="Writing"/>
 
         <updated>2021-04-29T18:21:11+08:00</updated>
@@ -949,8 +949,8 @@ This is also one of the reasons why reading is "unnecessary".
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/get-rid-of-the-following-five-misunderstandings-and-you-will-make-progress-faster/"/>
-        <id>https://notelism.com/get-rid-of-the-following-five-misunderstandings-and-you-will-make-progress-faster/</id>
+        <link href="https://litenotes.github.io/publii/get-rid-of-the-following-five-misunderstandings-and-you-will-make-progress-faster/"/>
+        <id>https://litenotes.github.io/publii/get-rid-of-the-following-five-misunderstandings-and-you-will-make-progress-faster/</id>
             <category term="Progress"/>
 
         <updated>2021-04-29T17:41:37+08:00</updated>
@@ -1021,8 +1021,8 @@ This is also one of the reasons why reading is "unnecessary".
         <author>
             <name>one</name>
         </author>
-        <link href="https://notelism.com/how-to-learn-faster/"/>
-        <id>https://notelism.com/how-to-learn-faster/</id>
+        <link href="https://litenotes.github.io/publii/how-to-learn-faster/"/>
+        <id>https://litenotes.github.io/publii/how-to-learn-faster/</id>
             <category term="Study"/>
 
         <updated>2021-04-29T11:22:35+08:00</updated>
