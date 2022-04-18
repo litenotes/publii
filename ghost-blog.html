@@ -1,4 +1,239 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的Ghost博客之旅 - Litenote</title><meta name="description" content="我的Ghost博客之旅其实非常简单，在腾讯云开发平台安装博客后，配置好域名，进入后台，把之前的文章导进去，然后整了几篇文章，然后很快精力就转到Gatsby上面了，然后Ghost升级4.0，没有很简单的升级方法，就放弃了。&nbsp;&nbsp; 腾讯云开发有模板，可以很简单创建Ghost博客。我也去搜了一下其他安装Ghost博客的教程，简直不忍直视，太复杂了。这个很快就可以配置成功。&nbsp; Ghost上面的主题非常漂亮。虽然免费的不多，但个个都是精品。我最后还是决定使用官方主题Casper，这款主题已经更新了几个版本，3.0版非常精致漂亮。Demo站点 Ghost的后台很漂亮，文章编辑支持markdowm，但是，说实话，体验很一般，编辑器是所见即所得，到又不是富文本，有时候会莫名其妙。然后，我试了好几个专业的markdown编辑器，复制过去后，都是很糟糕的格式。最保险的既然只能用记事本编辑。最后，我只能就在后台直接编辑。这样做并不好，我觉得最好还是先笔记应用上编辑好，多阅读修改完善，再发表。 目前Serverless使用的云数据库，是按时长计费，默认设置是10分钟无流量就暂停（可以去腾讯云数据库后台设置时长）。这就是权衡和取舍了。如果你觉得钱无所谓，自然可以让云数据库一直在线。但是我还是觉得很浪费。一旦数据库暂停，进入网站后，云数据库会冷启动，那么页面就会显示不正常，需要等几秒再刷新，页面才正常。整个过程体验就很不好。 这个概念很有意思，什么是Headless？目前还没有一个准确的翻译。大概意思是，可以通过其他网站框架和界面，然后使用Ghost来作为内容源，来整合一个网站。比如，我套用某大神做的Gatsby框架，套用Casper主题（ Jamify Tutorials - Jamify），直接使用Ghost里面的内容，做了一个一模一样的网站。只是，这个网站是纯静态的，直接放到腾讯的存储桶里面，就可以访问。事实上，我觉得就性能来说，Serverless版的Ghost比Gatsby版得静态网站还要快。 毕竟还是模板制作。两个问题很头疼，一是备份。如何快速，简单备份，不可能。我试过很多方法，都非常麻烦。二是升级，也非常麻烦。前不久Ghost刚升级4.0版本，然后看了官方文档，直接劝退。Serverless又不是普通服务器，直接放弃算了。然后，就是在腾讯云开发上面，继续回归WordPress。 后来学习了Docker，在Docker里面，可以很轻松搭建一个Ghost博客，性能各方面也是相当好，而且，官方居然还出了好几款极具设计感、创意的主题，尤其是Journal，非常漂亮，尤其是这种设计，居然不需要feature image，简直不要太好了。"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./ghost-blog.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./ghost-blog.html"},"headline":"我的Ghost博客之旅","datePublished":"2021-11-30T22:53","dateModified":"2021-12-07T17:58","image":{"@type":"ImageObject","url":"./media/posts/4/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg","height":1600,"width":2400},"description":"我的Ghost博客之旅其实非常简单，在腾讯云开发平台安装博客后，配置好域名，进入后台，把之前的文章导进去，然后整了几篇文章，然后很快精力就转到Gatsby上面了，然后Ghost升级4.0，没有很简单的升级方法，就放弃了。&nbsp;&nbsp; 腾讯云开发有模板，可以很简单创建Ghost博客。我也去搜了一下其他安装Ghost博客的教程，简直不忍直视，太复杂了。这个很快就可以配置成功。&nbsp; Ghost上面的主题非常漂亮。虽然免费的不多，但个个都是精品。我最后还是决定使用官方主题Casper，这款主题已经更新了几个版本，3.0版非常精致漂亮。Demo站点 Ghost的后台很漂亮，文章编辑支持markdowm，但是，说实话，体验很一般，编辑器是所见即所得，到又不是富文本，有时候会莫名其妙。然后，我试了好几个专业的markdown编辑器，复制过去后，都是很糟糕的格式。最保险的既然只能用记事本编辑。最后，我只能就在后台直接编辑。这样做并不好，我觉得最好还是先笔记应用上编辑好，多阅读修改完善，再发表。 目前Serverless使用的云数据库，是按时长计费，默认设置是10分钟无流量就暂停（可以去腾讯云数据库后台设置时长）。这就是权衡和取舍了。如果你觉得钱无所谓，自然可以让云数据库一直在线。但是我还是觉得很浪费。一旦数据库暂停，进入网站后，云数据库会冷启动，那么页面就会显示不正常，需要等几秒再刷新，页面才正常。整个过程体验就很不好。 这个概念很有意思，什么是Headless？目前还没有一个准确的翻译。大概意思是，可以通过其他网站框架和界面，然后使用Ghost来作为内容源，来整合一个网站。比如，我套用某大神做的Gatsby框架，套用Casper主题（ Jamify Tutorials - Jamify），直接使用Ghost里面的内容，做了一个一模一样的网站。只是，这个网站是纯静态的，直接放到腾讯的存储桶里面，就可以访问。事实上，我觉得就性能来说，Serverless版的Ghost比Gatsby版得静态网站还要快。 毕竟还是模板制作。两个问题很头疼，一是备份。如何快速，简单备份，不可能。我试过很多方法，都非常麻烦。二是升级，也非常麻烦。前不久Ghost刚升级4.0版本，然后看了官方文档，直接劝退。Serverless又不是普通服务器，直接放弃算了。然后，就是在腾讯云开发上面，继续回归WordPress。 后来学习了Docker，在Docker里面，可以很轻松搭建一个Ghost博客，性能各方面也是相当好，而且，官方居然还出了好几款极具设计感、创意的主题，尤其是Journal，非常漂亮，尤其是这种设计，居然不需要feature image，简直不要太好了。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">我的Ghost博客之旅</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2021-11-30T22:53" class="post__date">十一月 30, 2021</time><div class="post__updated">Updated on <time datetime="2021-11-30T22:53" class="post__date">十二月 7, 2021</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/4/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg" srcset="./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xs.jpg 384w, ./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-sm.jpg 600w, ./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-md.jpg 768w, ./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-lg.jpg 1200w, ./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="1600" width="2400" alt=""></div></figure><div class="post__inner"><div class="post__entry"><p>我的Ghost博客之旅其实非常简单，在腾讯云开发平台安装博客后，配置好域名，进入后台，把之前的文章导进去，然后整了几篇文章，然后很快精力就转到Gatsby上面了，然后Ghost升级4.0，没有很简单的升级方法，就放弃了。&nbsp;&nbsp;<br></p><h2 id="serverless-ghostnbsp">腾讯云开发Serverless Ghost&nbsp;</h2><p>腾讯云开发有模板，可以很简单创建Ghost博客。我也去搜了一下其他安装Ghost博客的教程，简直不忍直视，太复杂了。这个很快就可以配置成功。&nbsp;<br></p><h2 id="nbsp">主题&nbsp;</h2><p>Ghost上面的主题非常漂亮。虽然免费的不多，但个个都是精品。我最后还是决定使用官方主题Casper，这款主题已经更新了几个版本，3.0版非常精致漂亮。<a href="https://demo.ghost.io/" target="_blank">Demo站点</a></p><figure class="post__image post__image--center"><img decoding="async" loading="lazy" src="./media/posts/4/ghost.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/4/responsive/ghost-xs.png 384w, ./media/posts/4/responsive/ghost-sm.png 600w, ./media/posts/4/responsive/ghost-md.png 768w, ./media/posts/4/responsive/ghost-lg.png 1200w, ./media/posts/4/responsive/ghost-xl.png 1600w" height="2194" width="1468" alt=""></figure><p><br></p><h2>发布文章</h2><p>Ghost的后台很漂亮，文章编辑支持markdowm，但是，说实话，体验很一般，编辑器是所见即所得，到又不是富文本，有时候会莫名其妙。然后，我试了好几个专业的markdown编辑器，复制过去后，都是很糟糕的格式。最保险的既然只能用记事本编辑。最后，我只能就在后台直接编辑。这样做并不好，我觉得最好还是先笔记应用上编辑好，多阅读修改完善，再发表。<br></p><h2 id="serverlessnbsp">Serverless的局限&nbsp;</h2><p>目前Serverless使用的云数据库，是按时长计费，默认设置是10分钟无流量就暂停（可以去腾讯云数据库后台设置时长）。这就是权衡和取舍了。如果你觉得钱无所谓，自然可以让云数据库一直在线。但是我还是觉得很浪费。一旦数据库暂停，进入网站后，云数据库会冷启动，那么页面就会显示不正常，需要等几秒再刷新，页面才正常。整个过程体验就很不好。</p><figure class="post__image post__image--center"><img decoding="async" loading="lazy" src="./media/posts/4/xxx.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/4/responsive/xxx-xs.png 384w, ./media/posts/4/responsive/xxx-sm.png 600w, ./media/posts/4/responsive/xxx-md.png 768w, ./media/posts/4/responsive/xxx-lg.png 1200w, ./media/posts/4/responsive/xxx-xl.png 1600w" height="731" width="1468" alt=""></figure><h2 id="headless-cms">Headless CMS</h2><p>这个概念很有意思，什么是Headless？目前还没有一个准确的翻译。大概意思是，可以通过其他网站框架和界面，然后使用Ghost来作为内容源，来整合一个网站。比如，我套用某大神做的Gatsby框架，套用Casper主题（ <a href="https://www.jamify.org/" target="_blank">Jamify Tutorials - Jamify</a>），直接使用Ghost里面的内容，做了一个一模一样的网站。只是，这个网站是纯静态的，直接放到腾讯的存储桶里面，就可以访问。事实上，我觉得就性能来说，Serverless版的Ghost比Gatsby版得静态网站还要快。</p><h2>放弃</h2><p>毕竟还是模板制作。两个问题很头疼，一是备份。如何快速，简单备份，不可能。我试过很多方法，都非常麻烦。二是升级，也非常麻烦。前不久Ghost刚升级4.0版本，然后看了官方文档，直接劝退。Serverless又不是普通服务器，直接放弃算了。然后，就是在腾讯云开发上面，继续回归WordPress。</p><h2>重生</h2><p>后来学习了Docker，在Docker里面，可以很轻松搭建一个Ghost博客，性能各方面也是相当好，而且，官方居然还出了好几款极具设计感、创意的主题，尤其是<a href="https://ghost.org/themes/journal/" target="_blank">Journal</a>，非常漂亮，尤其是这种设计，居然不需要feature image，简直不要太好了。</p></div><footer class="post__footer"><div class="post__tag-share"><div class="post__share"></div></div></footer></div></article></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>我的Ghost博客之旅 - Litenote </title>
+        <meta name="description" content="我的Ghost博客之旅其实非常简单，在腾讯云开发平台安装博客后，配置好域名，进入后台，把之前的文章导进去，然后整了几篇文章，然后很快精力就转到Gatsby上面了，然后Ghost升级4.0，没有很简单的升级方法，就放弃了。&nbsp;&nbsp; 腾讯云开发有模板，可以很简单创建Ghost博客。我也去搜了一下其他安装Ghost博客的教程，简直不忍直视，太复杂了。这个很快就可以配置成功。&nbsp; Ghost上面的主题非常漂亮。虽然免费的不多，但个个都是精品。我最后还是决定使用官方主题Casper，这款主题已经更新了几个版本，3.0版非常精致漂亮。Demo站点 Ghost的后台很漂亮，文章编辑支持markdowm，但是，说实话，体验很一般，编辑器是所见即所得，到又不是富文本，有时候会莫名其妙。然后，我试了好几个专业的markdown编辑器，复制过去后，都是很糟糕的格式。最保险的既然只能用记事本编辑。最后，我只能就在后台直接编辑。这样做并不好，我觉得最好还是先笔记应用上编辑好，多阅读修改完善，再发表。 目前Serverless使用的云数据库，是按时长计费，默认设置是10分钟无流量就暂停（可以去腾讯云数据库后台设置时长）。这就是权衡和取舍了。如果你觉得钱无所谓，自然可以让云数据库一直在线。但是我还是觉得很浪费。一旦数据库暂停，进入网站后，云数据库会冷启动，那么页面就会显示不正常，需要等几秒再刷新，页面才正常。整个过程体验就很不好。 这个概念很有意思，什么是Headless？目前还没有一个准确的翻译。大概意思是，可以通过其他网站框架和界面，然后使用Ghost来作为内容源，来整合一个网站。比如，我套用某大神做的Gatsby框架，套用Casper主题（ Jamify Tutorials - Jamify），直接使用Ghost里面的内容，做了一个一模一样的网站。只是，这个网站是纯静态的，直接放到腾讯的存储桶里面，就可以访问。事实上，我觉得就性能来说，Serverless版的Ghost比Gatsby版得静态网站还要快。 毕竟还是模板制作。两个问题很头疼，一是备份。如何快速，简单备份，不可能。我试过很多方法，都非常麻烦。二是升级，也非常麻烦。前不久Ghost刚升级4.0版本，然后看了官方文档，直接劝退。Serverless又不是普通服务器，直接放弃算了。然后，就是在腾讯云开发上面，继续回归WordPress。 后来学习了Docker，在Docker里面，可以很轻松搭建一个Ghost博客，性能各方面也是相当好，而且，官方居然还出了好几款极具设计感、创意的主题，尤其是Journal，非常漂亮，尤其是这种设计，居然不需要feature image，简直不要太好了。" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./ghost-blog.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./ghost-blog.html"},"headline":"我的Ghost博客之旅","datePublished":"2021-11-30T22:53","dateModified":"2021-12-07T17:58","image":{"@type":"ImageObject","url":"./media/posts/4/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg","height":1600,"width":2400},"description":"我的Ghost博客之旅其实非常简单，在腾讯云开发平台安装博客后，配置好域名，进入后台，把之前的文章导进去，然后整了几篇文章，然后很快精力就转到Gatsby上面了，然后Ghost升级4.0，没有很简单的升级方法，就放弃了。&nbsp;&nbsp; 腾讯云开发有模板，可以很简单创建Ghost博客。我也去搜了一下其他安装Ghost博客的教程，简直不忍直视，太复杂了。这个很快就可以配置成功。&nbsp; Ghost上面的主题非常漂亮。虽然免费的不多，但个个都是精品。我最后还是决定使用官方主题Casper，这款主题已经更新了几个版本，3.0版非常精致漂亮。Demo站点 Ghost的后台很漂亮，文章编辑支持markdowm，但是，说实话，体验很一般，编辑器是所见即所得，到又不是富文本，有时候会莫名其妙。然后，我试了好几个专业的markdown编辑器，复制过去后，都是很糟糕的格式。最保险的既然只能用记事本编辑。最后，我只能就在后台直接编辑。这样做并不好，我觉得最好还是先笔记应用上编辑好，多阅读修改完善，再发表。 目前Serverless使用的云数据库，是按时长计费，默认设置是10分钟无流量就暂停（可以去腾讯云数据库后台设置时长）。这就是权衡和取舍了。如果你觉得钱无所谓，自然可以让云数据库一直在线。但是我还是觉得很浪费。一旦数据库暂停，进入网站后，云数据库会冷启动，那么页面就会显示不正常，需要等几秒再刷新，页面才正常。整个过程体验就很不好。 这个概念很有意思，什么是Headless？目前还没有一个准确的翻译。大概意思是，可以通过其他网站框架和界面，然后使用Ghost来作为内容源，来整合一个网站。比如，我套用某大神做的Gatsby框架，套用Casper主题（ Jamify Tutorials - Jamify），直接使用Ghost里面的内容，做了一个一模一样的网站。只是，这个网站是纯静态的，直接放到腾讯的存储桶里面，就可以访问。事实上，我觉得就性能来说，Serverless版的Ghost比Gatsby版得静态网站还要快。 毕竟还是模板制作。两个问题很头疼，一是备份。如何快速，简单备份，不可能。我试过很多方法，都非常麻烦。二是升级，也非常麻烦。前不久Ghost刚升级4.0版本，然后看了官方文档，直接劝退。Serverless又不是普通服务器，直接放弃算了。然后，就是在腾讯云开发上面，继续回归WordPress。 后来学习了Docker，在Docker里面，可以很轻松搭建一个Ghost博客，性能各方面也是相当好，而且，官方居然还出了好几款极具设计感、创意的主题，尤其是Journal，非常漂亮，尤其是这种设计，居然不需要feature image，简直不要太好了。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               我的Ghost博客之旅
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-11-30T22:53" class="post__date">
+                                 十一月 30, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-11-30T22:53" class="post__date">
+                                       十二月 7, 2021
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/4/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg"
+                           srcset="./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xs.jpg 384w ,./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-sm.jpg 600w ,./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-md.jpg 768w ,./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-lg.jpg 1200w ,./media/posts/4/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1600"
+                        width="2400"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               
+  <p>
+    我的Ghost博客之旅其实非常简单，在腾讯云开发平台安装博客后，配置好域名，进入后台，把之前的文章导进去，然后整了几篇文章，然后很快精力就转到Gatsby上面了，然后Ghost升级4.0，没有很简单的升级方法，就放弃了。&nbsp;&nbsp;<br>
+  </p>
+
+    <h2 id="serverless-ghostnbsp">
+      腾讯云开发Serverless Ghost&nbsp;
+    </h2>
+
+  <p>
+    腾讯云开发有模板，可以很简单创建Ghost博客。我也去搜了一下其他安装Ghost博客的教程，简直不忍直视，太复杂了。这个很快就可以配置成功。&nbsp;<br>
+  </p>
+
+    <h2 id="nbsp">
+      主题&nbsp;
+    </h2>
+
+  <p>
+    Ghost上面的主题非常漂亮。虽然免费的不多，但个个都是精品。我最后还是决定使用官方主题Casper，这款主题已经更新了几个版本，3.0版非常精致漂亮。<a href="https://demo.ghost.io/" class="" target="_blank">Demo站点</a>
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img decoding="async" loading="lazy" src="./media/posts/4/ghost.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/4/responsive/ghost-xs.png 384w ,./media/posts/4/responsive/ghost-sm.png 600w ,./media/posts/4/responsive/ghost-md.png 768w ,./media/posts/4/responsive/ghost-lg.png 1200w ,./media/posts/4/responsive/ghost-xl.png 1600w"  height="2194" width="1468" alt="" />
+      
+    </figure>
+
+  <p>
+    <br>
+  </p>
+
+    <h2>
+      发布文章
+    </h2>
+
+  <p>
+    Ghost的后台很漂亮，文章编辑支持markdowm，但是，说实话，体验很一般，编辑器是所见即所得，到又不是富文本，有时候会莫名其妙。然后，我试了好几个专业的markdown编辑器，复制过去后，都是很糟糕的格式。最保险的既然只能用记事本编辑。最后，我只能就在后台直接编辑。这样做并不好，我觉得最好还是先笔记应用上编辑好，多阅读修改完善，再发表。
+<br>
+  </p>
+
+    <h2 id="serverlessnbsp">
+      Serverless的局限&nbsp;
+    </h2>
+
+  <p>
+    目前Serverless使用的云数据库，是按时长计费，默认设置是10分钟无流量就暂停（可以去腾讯云数据库后台设置时长）。这就是权衡和取舍了。如果你觉得钱无所谓，自然可以让云数据库一直在线。但是我还是觉得很浪费。一旦数据库暂停，进入网站后，云数据库会冷启动，那么页面就会显示不正常，需要等几秒再刷新，页面才正常。整个过程体验就很不好。
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img decoding="async" loading="lazy" src="./media/posts/4/xxx.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/4/responsive/xxx-xs.png 384w ,./media/posts/4/responsive/xxx-sm.png 600w ,./media/posts/4/responsive/xxx-md.png 768w ,./media/posts/4/responsive/xxx-lg.png 1200w ,./media/posts/4/responsive/xxx-xl.png 1600w"  height="731" width="1468" alt="" />
+      
+    </figure>
+
+    <h2 id="headless-cms">
+      Headless CMS
+    </h2>
+
+  <p>
+    这个概念很有意思，什么是Headless？目前还没有一个准确的翻译。大概意思是，可以通过其他网站框架和界面，然后使用Ghost来作为内容源，来整合一个网站。比如，我套用某大神做的Gatsby框架，套用Casper主题（ <a href="https://www.jamify.org/" target="_blank">Jamify Tutorials - Jamify</a>），直接使用Ghost里面的内容，做了一个一模一样的网站。只是，这个网站是纯静态的，直接放到腾讯的存储桶里面，就可以访问。事实上，我觉得就性能来说，Serverless版的Ghost比Gatsby版得静态网站还要快。
+  </p>
+
+    <h2>
+      放弃
+    </h2>
+
+  <p>
+    毕竟还是模板制作。两个问题很头疼，一是备份。如何快速，简单备份，不可能。我试过很多方法，都非常麻烦。二是升级，也非常麻烦。前不久Ghost刚升级4.0版本，然后看了官方文档，直接劝退。Serverless又不是普通服务器，直接放弃算了。然后，就是在腾讯云开发上面，继续回归WordPress。
+  </p>
+
+    <h2>
+      重生
+    </h2>
+
+  <p>
+    后来学习了Docker，在Docker里面，可以很轻松搭建一个Ghost博客，性能各方面也是相当好，而且，官方居然还出了好几款极具设计感、创意的主题，尤其是<a href="https://ghost.org/themes/journal/" target="_blank">Journal</a>，非常漂亮，尤其是这种设计，居然不需要feature image，简直不要太好了。
+  </p>
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +247,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

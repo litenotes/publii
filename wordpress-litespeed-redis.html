@@ -1,4 +1,294 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WordPress LiteSpeed Redis - Litenote</title><meta name="description" content="要想速度快，不得不折腾。LiteSpeed已经很快了，如何快上加快，那就得看Redis了。选择Redis的原因，第一是配置简单，第二是性能出色。 配置过程，可以参考编写极端恶心的官方文档。我也是几经周折，参考了无数教程，最后发现，原来官方文档才是最匹配的。其实重点还是在安装匹配你的系统的组件。比如，我是CentOS8，那么，就要去官方库Index of /centos/ (litespeedtech.com) 找到并安装好e18这个版本。 Add the EPEL repository:yum install epel-releaseInstall Redis:yum install redisStart Redis:systemctl start redis Add the&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./wordpress-litespeed-redis.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./wordpress-litespeed-redis.html"},"headline":"WordPress LiteSpeed Redis","datePublished":"2021-04-27T14:20","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/53/photo-1522199755839-a2bacb67c546-1.jpg","height":1331,"width":2000},"description":"要想速度快，不得不折腾。LiteSpeed已经很快了，如何快上加快，那就得看Redis了。选择Redis的原因，第一是配置简单，第二是性能出色。 配置过程，可以参考编写极端恶心的官方文档。我也是几经周折，参考了无数教程，最后发现，原来官方文档才是最匹配的。其实重点还是在安装匹配你的系统的组件。比如，我是CentOS8，那么，就要去官方库Index of /centos/ (litespeedtech.com) 找到并安装好e18这个版本。 Add the EPEL repository:yum install epel-releaseInstall Redis:yum install redisStart Redis:systemctl start redis Add the&hellip;","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">WordPress LiteSpeed Redis</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2021-04-27T14:20" class="post__date">四月 27, 2021</time><div class="post__updated">Updated on <time datetime="2021-04-27T14:20" class="post__date">四月 16, 2022</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/53/photo-1522199755839-a2bacb67c546-1.jpg" srcset="./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-xs.jpg 384w, ./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-sm.jpg 600w, ./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-md.jpg 768w, ./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-lg.jpg 1200w, ./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="1331" width="2000" alt=""></div></figure><div class="post__inner"><div class="post__entry"><p></p><p>要想速度快，不得不折腾。LiteSpeed已经很快了，如何快上加快，那就得看<a href="https://redis.io/"><strong>Redis</strong></a>了。选择Redis的原因，第一是<strong>配置简单</strong>，第二是<strong>性能出色</strong>。</p><p></p><p></p><h2 id="%E9%85%8D%E7%BD%AE">配置</h2><p></p><p></p><p>配置过程，可以参考编写极端恶心的<a href="https://docs.litespeedtech.com/lscache/lscwp/admin/#memcached-lsmcd-and-redis-object-cache-support-in-lscwp">官方文档</a>。我也是几经周折，参考了无数教程，最后发现，原来官方文档才是<strong>最匹配</strong>的。其实重点还是在安装匹配你的系统的组件。比如，我是CentOS8，那么，就要去官方库<a href="http://rpms.litespeedtech.com/centos/">Index of /centos/ (litespeedtech.com)</a> 找到并安装好e18这个版本。</p><p></p><p></p><h3 id="%E5%AE%89%E8%A3%85redis">安装redis</h3><p></p><p></p><pre class="wp-block-code"><code>Add the EPEL repository:yum install epel-releaseInstall Redis:yum install redisStart Redis:systemctl start redis</code></pre><p></p><p></p><h3 id="%E5%AE%89%E8%A3%85redis-php-extension">安装Redis PHP extension</h3><p></p><p></p><pre class="wp-block-code"><code>Add the LiteSpeed repository:rpm -ivh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpmList the LiteSpeed Redis PHP extension:yum list | awk '/lsphp/&amp;&amp;/redis/'Install PHP (substitute your LSPHP version if it is different):yum -y install lsphp71-pecl-redis</code></pre><p></p><p></p><h3 id="%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F">测试是否安装成功</h3><p></p><p></p><pre class="wp-block-code"><code>redis-cli ping</code></pre><p></p><p></p><p>反馈PONG表示安装成功</p><p></p><p></p><h3 id="litespeed%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE">LiteSpeed插件配置</h3><p></p><p></p><p>重启LiteSpeed服务，WordPress后台找到LiteSpeed插件，打开<strong>缓存规则</strong>，打开第6个选项卡<strong>对象</strong>，然后开启<strong>对象缓存</strong>。注意选择好对应的方法：<strong>Redis</strong>，对应的端口<strong>6379</strong>，如何是阿里云还需要在安全组设置相应的端口。状态为<strong>绿色</strong>就表示已经正确使用Redis缓存了。</p><p></p><p></p><figure class="wp-block-image size-full kg-card kg-image-card"><figure class="wp-image-1763"><img decoding="async" loading="lazy" src="./media/posts/53/litespeed.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/53/responsive/litespeed-xs.png 384w, ./media/posts/53/responsive/litespeed-sm.png 600w, ./media/posts/53/responsive/litespeed-md.png 768w, ./media/posts/53/responsive/litespeed-lg.png 1200w, ./media/posts/53/responsive/litespeed-xl.png 1600w" alt=""></figure></figure><p></p><p></p><h2 id="%E6%80%A7%E8%83%BD">性能</h2><p></p><p></p><p>找到一篇文章<a href="https://www.smarthost.eu/blog/is-litespeed-faster-than-apache">Is Litespeed faster than Apache?</a>，作者对不同的配置进行了测试，litespeed+Redis的性能是很优秀的。</p><p></p><p></p><figure class="wp-block-image size-full kg-card kg-image-card"><figure class="wp-image-1764"><img decoding="async" loading="lazy" src="./media/posts/53/litespeed-vs.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/53/responsive/litespeed-vs-xs.png 384w, ./media/posts/53/responsive/litespeed-vs-sm.png 600w, ./media/posts/53/responsive/litespeed-vs-md.png 768w, ./media/posts/53/responsive/litespeed-vs-lg.png 1200w, ./media/posts/53/responsive/litespeed-vs-xl.png 1600w" alt=""></figure></figure><p></p><p></p><p>我也在<a href="http://gtmetrix.com/">Gtmetrix</a>上对我的网站进行了测试，得到<strong>A，Performance 97%，Structure 99%</strong>的成绩。</p><p></p><p></p><figure class="wp-block-image size-full kg-card kg-image-card"><figure class="wp-image-1765"><img decoding="async" loading="lazy" src="./media/posts/53/litespeed2.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/53/responsive/litespeed2-xs.png 384w, ./media/posts/53/responsive/litespeed2-sm.png 600w, ./media/posts/53/responsive/litespeed2-md.png 768w, ./media/posts/53/responsive/litespeed2-lg.png 1200w, ./media/posts/53/responsive/litespeed2-xl.png 1600w" alt=""></figure></figure><p></p></div><footer class="post__footer"><div class="post__tag-share"><div class="post__share"></div></div></footer></div></article><div class="post__related"><h3 class="post__related__title">Related posts</h3><div class="l-grid l-grid--2"><article class="c-card"><div class="c-card__wrapper"><figure class="c-card__image is-img-loading"><img src="./media/posts/70/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1.jpg" srcset="./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-xs.jpg 384w, ./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-sm.jpg 600w, ./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-md.jpg 768w, ./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-lg.jpg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw" loading="lazy" height="1281" width="1919" alt=""></figure><div class="c-card__content"><header><h2 class="c-card__title"><a href="./hui-gui-wordpress.html" class="invert">回归WordPress</a></h2></header><footer class="c-card__meta"></footer></div></div></article><article class="c-card"><div class="c-card__wrapper"><figure class="c-card__image is-img-loading"><img src="./media/posts/55/ghost-1-1-1.png" srcset="./media/posts/55/responsive/ghost-1-1-1-xs.png 384w, ./media/posts/55/responsive/ghost-1-1-1-sm.png 600w, ./media/posts/55/responsive/ghost-1-1-1-md.png 768w, ./media/posts/55/responsive/ghost-1-1-1-lg.png 1200w" sizes="(min-width: 37.5em) 80vw, 50vw" loading="lazy" height="640" width="1280" alt=""></figure><div class="c-card__content"><header><h2 class="c-card__title"><a href="./ghost-litespeed-cyberpanel-docker.html" class="invert">Ghost Litespeed Cyberpanel Docker</a></h2></header><footer class="c-card__meta"></footer></div></div></article></div></div></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>WordPress LiteSpeed Redis - Litenote </title>
+        <meta name="description" content="要想速度快，不得不折腾。LiteSpeed已经很快了，如何快上加快，那就得看Redis了。选择Redis的原因，第一是配置简单，第二是性能出色。 配置过程，可以参考编写极端恶心的官方文档。我也是几经周折，参考了无数教程，最后发现，原来官方文档才是最匹配的。其实重点还是在安装匹配你的系统的组件。比如，我是CentOS8，那么，就要去官方库Index of /centos/ (litespeedtech.com) 找到并安装好e18这个版本。 Add the EPEL repository:yum install epel-releaseInstall Redis:yum install redisStart Redis:systemctl start redis Add the&hellip;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./wordpress-litespeed-redis.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./wordpress-litespeed-redis.html"},"headline":"WordPress LiteSpeed Redis","datePublished":"2021-04-27T14:20","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/53/photo-1522199755839-a2bacb67c546-1.jpg","height":1331,"width":2000},"description":"要想速度快，不得不折腾。LiteSpeed已经很快了，如何快上加快，那就得看Redis了。选择Redis的原因，第一是配置简单，第二是性能出色。 配置过程，可以参考编写极端恶心的官方文档。我也是几经周折，参考了无数教程，最后发现，原来官方文档才是最匹配的。其实重点还是在安装匹配你的系统的组件。比如，我是CentOS8，那么，就要去官方库Index of /centos/ (litespeedtech.com) 找到并安装好e18这个版本。 Add the EPEL repository:yum install epel-releaseInstall Redis:yum install redisStart Redis:systemctl start redis Add the&hellip;","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               WordPress LiteSpeed Redis
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-04-27T14:20" class="post__date">
+                                 四月 27, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-04-27T14:20" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/53/photo-1522199755839-a2bacb67c546-1.jpg"
+                           srcset="./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-xs.jpg 384w ,./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-sm.jpg 600w ,./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-md.jpg 768w ,./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-lg.jpg 1200w ,./media/posts/53/responsive/photo-1522199755839-a2bacb67c546-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1331"
+                        width="2000"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:paragraph --></p>
+<p>要想速度快，不得不折腾。LiteSpeed已经很快了，如何快上加快，那就得看<a href="https://redis.io/"><strong>Redis</strong></a>了。选择Redis的原因，第一是<strong>配置简单</strong>，第二是<strong>性能出色</strong>。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 id="%E9%85%8D%E7%BD%AE">配置</h2>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>配置过程，可以参考编写极端恶心的<a href="https://docs.litespeedtech.com/lscache/lscwp/admin/#memcached-lsmcd-and-redis-object-cache-support-in-lscwp">官方文档</a>。我也是几经周折，参考了无数教程，最后发现，原来官方文档才是<strong>最匹配</strong>的。其实重点还是在安装匹配你的系统的组件。比如，我是CentOS8，那么，就要去官方库<a href="http://rpms.litespeedtech.com/centos/">Index of /centos/ (litespeedtech.com)</a> 找到并安装好e18这个版本。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 id="%E5%AE%89%E8%A3%85redis">安装redis</h3>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>Add the EPEL repository:yum install epel-releaseInstall Redis:yum install redisStart Redis:systemctl start redis</code></pre>
+<p>
+<!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 id="%E5%AE%89%E8%A3%85redis-php-extension">安装Redis PHP extension</h3>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>Add the LiteSpeed repository:rpm -ivh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el7.noarch.rpmList the LiteSpeed Redis PHP extension:yum list | awk '/lsphp/&amp;&amp;/redis/'Install PHP (substitute your LSPHP version if it is different):yum -y install lsphp71-pecl-redis</code></pre>
+<p>
+<!-- /wp:code --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 id="%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F">测试是否安装成功</h3>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>redis-cli ping</code></pre>
+<p>
+<!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>反馈PONG表示安装成功</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 id="litespeed%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE">LiteSpeed插件配置</h3>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>重启LiteSpeed服务，WordPress后台找到LiteSpeed插件，打开<strong>缓存规则</strong>，打开第6个选项卡<strong>对象</strong>，然后开启<strong>对象缓存</strong>。注意选择好对应的方法：<strong>Redis</strong>，对应的端口<strong>6379</strong>，如何是阿里云还需要在安全组设置相应的端口。状态为<strong>绿色</strong>就表示已经正确使用Redis缓存了。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":1763,"sizeSlug":"full","linkDestination":"none","className":"kg-card kg-image-card"} --></p>
+<figure class="wp-block-image size-full kg-card kg-image-card"><figure class="wp-image-1763"><img decoding="async" loading="lazy" src="./media/posts/53/litespeed.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/53/responsive/litespeed-xs.png 384w ,./media/posts/53/responsive/litespeed-sm.png 600w ,./media/posts/53/responsive/litespeed-md.png 768w ,./media/posts/53/responsive/litespeed-lg.png 1200w ,./media/posts/53/responsive/litespeed-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2 id="%E6%80%A7%E8%83%BD">性能</h2>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>找到一篇文章<a href="https://www.smarthost.eu/blog/is-litespeed-faster-than-apache">Is Litespeed faster than Apache?</a>，作者对不同的配置进行了测试，litespeed+Redis的性能是很优秀的。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":1764,"sizeSlug":"full","linkDestination":"none","className":"kg-card kg-image-card"} --></p>
+<figure class="wp-block-image size-full kg-card kg-image-card"><figure class="wp-image-1764"><img decoding="async" loading="lazy" src="./media/posts/53/litespeed-vs.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/53/responsive/litespeed-vs-xs.png 384w ,./media/posts/53/responsive/litespeed-vs-sm.png 600w ,./media/posts/53/responsive/litespeed-vs-md.png 768w ,./media/posts/53/responsive/litespeed-vs-lg.png 1200w ,./media/posts/53/responsive/litespeed-vs-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>我也在<a href="http://gtmetrix.com/">Gtmetrix</a>上对我的网站进行了测试，得到<strong>A，Performance 97%，Structure 99%</strong>的成绩。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":1765,"sizeSlug":"full","linkDestination":"none","className":"kg-card kg-image-card"} --></p>
+<figure class="wp-block-image size-full kg-card kg-image-card"><figure class="wp-image-1765"><img decoding="async" loading="lazy" src="./media/posts/53/litespeed2.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/53/responsive/litespeed2-xs.png 384w ,./media/posts/53/responsive/litespeed2-sm.png 600w ,./media/posts/53/responsive/litespeed2-md.png 768w ,./media/posts/53/responsive/litespeed2-lg.png 1200w ,./media/posts/53/responsive/litespeed2-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+         <div class="post__related">
+            <h3 class="post__related__title">
+               Related posts
+            </h3>
+            <div class="l-grid l-grid--2">
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./media/posts/70/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1.jpg"
+                                          srcset="./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-xs.jpg 384w ,./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-sm.jpg 600w ,./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-md.jpg 768w ,./media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-lg.jpg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="1281"
+                                    width="1919"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./hui-gui-wordpress.html" class="invert">
+                                    回归WordPress
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./media/posts/55/ghost-1-1-1.png"
+                                          srcset="./media/posts/55/responsive/ghost-1-1-1-xs.png 384w ,./media/posts/55/responsive/ghost-1-1-1-sm.png 600w ,./media/posts/55/responsive/ghost-1-1-1-md.png 768w ,./media/posts/55/responsive/ghost-1-1-1-lg.png 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="640"
+                                    width="1280"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./ghost-litespeed-cyberpanel-docker.html" class="invert">
+                                    Ghost Litespeed Cyberpanel Docker
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+            </div>
+         </div>
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +302,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

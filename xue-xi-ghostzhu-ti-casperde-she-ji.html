@@ -1,4 +1,208 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>学习Ghost主题Casper的设计 - Litenote</title><meta name="description" content="Ghost的主题库，太优秀了，如果你是要做一个以发布文章为主的博客网站，Ghost主题库随便找一个，都是上品，但是WordPress却不是这样的，随便找一个，你去看看，与Ghost的主题对比，差距就是肉眼可见的。 付费的主题，目前看来，还是慎重，毕竟官方制作的免费主题，也是非常出彩的，尤其是我最喜欢的Casper。 不是说完全复刻，我觉得，有一些设计上的细节，还是值得参考，尤其是，有些细节不知道该如何处理的时候，看看Casper，或许会有新的启发。Kadence的默认样式，也是非常漂亮的，但是我觉得，很多设定，还是Casper更好，因此，我对照Casper的设定，将首页的样式进行了微调。 1.让多余的meta标签，保留分类、标题、日期、摘要，其他的都不显示、那么文章方块就更简洁。 2.内容样式默认是一个个方块，改成不要方块的，这样图片跟标题、摘要宽度就一致，整体感更强。 3.设定摘要为最多显示三行：博客摘要美化-显示固定行数。 4.页脚的版权显示也进行对照修改。 还有其他的一些细节，很多还无法简单修改，那就放弃吧，例如，目前还没有找到一款能简单制作第一篇文章那样的大方块的方法。目前正在测试的是用Block来制作，我也在一个Home的页面进行调试和修改。WordPress的5.9将会全力推进全站编辑功能，或许，2022年的WordPress将会在可玩性上越来越让人激动。"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./xue-xi-ghostzhu-ti-casperde-she-ji.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./xue-xi-ghostzhu-ti-casperde-she-ji.html"},"headline":"学习Ghost主题Casper的设计","datePublished":"2022-01-19T18:00","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/81/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg","height":1600,"width":2400},"description":"Ghost的主题库，太优秀了，如果你是要做一个以发布文章为主的博客网站，Ghost主题库随便找一个，都是上品，但是WordPress却不是这样的，随便找一个，你去看看，与Ghost的主题对比，差距就是肉眼可见的。 付费的主题，目前看来，还是慎重，毕竟官方制作的免费主题，也是非常出彩的，尤其是我最喜欢的Casper。 不是说完全复刻，我觉得，有一些设计上的细节，还是值得参考，尤其是，有些细节不知道该如何处理的时候，看看Casper，或许会有新的启发。Kadence的默认样式，也是非常漂亮的，但是我觉得，很多设定，还是Casper更好，因此，我对照Casper的设定，将首页的样式进行了微调。 1.让多余的meta标签，保留分类、标题、日期、摘要，其他的都不显示、那么文章方块就更简洁。 2.内容样式默认是一个个方块，改成不要方块的，这样图片跟标题、摘要宽度就一致，整体感更强。 3.设定摘要为最多显示三行：博客摘要美化-显示固定行数。 4.页脚的版权显示也进行对照修改。 还有其他的一些细节，很多还无法简单修改，那就放弃吧，例如，目前还没有找到一款能简单制作第一篇文章那样的大方块的方法。目前正在测试的是用Block来制作，我也在一个Home的页面进行调试和修改。WordPress的5.9将会全力推进全站编辑功能，或许，2022年的WordPress将会在可玩性上越来越让人激动。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">学习Ghost主题Casper的设计</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2022-01-19T18:00" class="post__date">一月 19, 2022</time><div class="post__updated">Updated on <time datetime="2022-01-19T18:00" class="post__date">四月 16, 2022</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/81/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg" srcset="./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xs.jpg 384w, ./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-sm.jpg 600w, ./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-md.jpg 768w, ./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-lg.jpg 1200w, ./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="1600" width="2400" alt=""></div></figure><div class="post__inner"><div class="post__entry"><p></p><p>Ghost的主题库，太优秀了，如果你是要做一个以发布文章为主的博客网站，Ghost主题库随便找一个，都是上品，但是WordPress却不是这样的，随便找一个，你去看看，与Ghost的主题对比，差距就是肉眼可见的。</p><p></p><p></p><figure class="wp-block-image size-large"><figure class="wp-image-1782"><img decoding="async" loading="lazy" src="./media/posts/81/image-35-1024x538.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/81/responsive/image-35-1024x538-xs.png 384w, ./media/posts/81/responsive/image-35-1024x538-sm.png 600w, ./media/posts/81/responsive/image-35-1024x538-md.png 768w, ./media/posts/81/responsive/image-35-1024x538-lg.png 1200w, ./media/posts/81/responsive/image-35-1024x538-xl.png 1600w" alt=""></figure></figure><p></p><p></p><p>付费的主题，目前看来，还是慎重，毕竟官方制作的免费主题，也是非常出彩的，尤其是我最喜欢的<strong><a rel="noreferrer noopener" href="https://demo.ghost.io/" data-type="URL" data-id="https://demo.ghost.io/" target="_blank">Casper</a></strong>。</p><p></p><p></p><figure class="wp-block-image size-large"><figure class="wp-image-430"><img decoding="async" loading="lazy" src="./media/posts/81/demo.ghost_.io_.feature-1-1024x682.jpeg" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-xs.jpeg 384w, ./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-sm.jpeg 600w, ./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-md.jpeg 768w, ./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-lg.jpeg 1200w, ./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-xl.jpeg 1600w" alt="demo.ghost.io.feature.jpeg"></figure></figure><p></p><p></p><p>不是说完全复刻，我觉得，有一些设计上的细节，还是值得参考，尤其是，有些细节不知道该如何处理的时候，看看Casper，或许会有新的启发。Kadence的默认样式，也是非常漂亮的，但是我觉得，很多设定，还是Casper更好，因此，我对照Casper的设定，将首页的样式进行了微调。</p><p></p><p></p><p>1.让多余的meta标签，保留分类、标题、日期、摘要，其他的都不显示、那么文章方块就更简洁。</p><p></p><p></p><p>2.内容样式默认是一个个方块，改成不要方块的，这样图片跟标题、摘要宽度就一致，整体感更强。</p><p></p><p></p><p>3.设定摘要为最多显示三行：<a href="https://notecore.net/post/1289" data-type="URL" data-id="https://notecore.net/post/1289" target="_blank" rel="noreferrer noopener"><strong>博客摘要美化-显示固定行数</strong></a>。</p><p></p><p></p><p>4.页脚的版权显示也进行对照修改。</p><p></p><p></p><p>还有其他的一些细节，很多还无法简单修改，那就放弃吧，例如，目前还没有找到一款能简单制作第一篇文章那样的大方块的方法。目前正在测试的是用Block来制作，我也在一个<strong><a rel="noreferrer noopener" data-type="URL" data-id="https://notecore.net/home" href="https://notecore.net/home" target="_blank">Home</a></strong>的页面进行调试和修改。WordPress的5.9将会全力推进全站编辑功能，或许，2022年的WordPress将会在可玩性上越来越让人激动。</p><p></p><p></p><p></p></div><footer class="post__footer"><div class="post__tag-share"><div class="post__share"></div></div></footer></div></article></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>学习Ghost主题Casper的设计 - Litenote </title>
+        <meta name="description" content="Ghost的主题库，太优秀了，如果你是要做一个以发布文章为主的博客网站，Ghost主题库随便找一个，都是上品，但是WordPress却不是这样的，随便找一个，你去看看，与Ghost的主题对比，差距就是肉眼可见的。 付费的主题，目前看来，还是慎重，毕竟官方制作的免费主题，也是非常出彩的，尤其是我最喜欢的Casper。 不是说完全复刻，我觉得，有一些设计上的细节，还是值得参考，尤其是，有些细节不知道该如何处理的时候，看看Casper，或许会有新的启发。Kadence的默认样式，也是非常漂亮的，但是我觉得，很多设定，还是Casper更好，因此，我对照Casper的设定，将首页的样式进行了微调。 1.让多余的meta标签，保留分类、标题、日期、摘要，其他的都不显示、那么文章方块就更简洁。 2.内容样式默认是一个个方块，改成不要方块的，这样图片跟标题、摘要宽度就一致，整体感更强。 3.设定摘要为最多显示三行：博客摘要美化-显示固定行数。 4.页脚的版权显示也进行对照修改。 还有其他的一些细节，很多还无法简单修改，那就放弃吧，例如，目前还没有找到一款能简单制作第一篇文章那样的大方块的方法。目前正在测试的是用Block来制作，我也在一个Home的页面进行调试和修改。WordPress的5.9将会全力推进全站编辑功能，或许，2022年的WordPress将会在可玩性上越来越让人激动。" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./xue-xi-ghostzhu-ti-casperde-she-ji.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./xue-xi-ghostzhu-ti-casperde-she-ji.html"},"headline":"学习Ghost主题Casper的设计","datePublished":"2022-01-19T18:00","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/81/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg","height":1600,"width":2400},"description":"Ghost的主题库，太优秀了，如果你是要做一个以发布文章为主的博客网站，Ghost主题库随便找一个，都是上品，但是WordPress却不是这样的，随便找一个，你去看看，与Ghost的主题对比，差距就是肉眼可见的。 付费的主题，目前看来，还是慎重，毕竟官方制作的免费主题，也是非常出彩的，尤其是我最喜欢的Casper。 不是说完全复刻，我觉得，有一些设计上的细节，还是值得参考，尤其是，有些细节不知道该如何处理的时候，看看Casper，或许会有新的启发。Kadence的默认样式，也是非常漂亮的，但是我觉得，很多设定，还是Casper更好，因此，我对照Casper的设定，将首页的样式进行了微调。 1.让多余的meta标签，保留分类、标题、日期、摘要，其他的都不显示、那么文章方块就更简洁。 2.内容样式默认是一个个方块，改成不要方块的，这样图片跟标题、摘要宽度就一致，整体感更强。 3.设定摘要为最多显示三行：博客摘要美化-显示固定行数。 4.页脚的版权显示也进行对照修改。 还有其他的一些细节，很多还无法简单修改，那就放弃吧，例如，目前还没有找到一款能简单制作第一篇文章那样的大方块的方法。目前正在测试的是用Block来制作，我也在一个Home的页面进行调试和修改。WordPress的5.9将会全力推进全站编辑功能，或许，2022年的WordPress将会在可玩性上越来越让人激动。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               学习Ghost主题Casper的设计
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2022-01-19T18:00" class="post__date">
+                                 一月 19, 2022
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2022-01-19T18:00" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/81/pankaj-patel-Ylk5n_nd9dA-unsplash.jpg"
+                           srcset="./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xs.jpg 384w ,./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-sm.jpg 600w ,./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-md.jpg 768w ,./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-lg.jpg 1200w ,./media/posts/81/responsive/pankaj-patel-Ylk5n_nd9dA-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1600"
+                        width="2400"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:paragraph --></p>
+<p>Ghost的主题库，太优秀了，如果你是要做一个以发布文章为主的博客网站，Ghost主题库随便找一个，都是上品，但是WordPress却不是这样的，随便找一个，你去看看，与Ghost的主题对比，差距就是肉眼可见的。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":1782,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-1782"><img decoding="async" loading="lazy" src="./media/posts/81/image-35-1024x538.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/81/responsive/image-35-1024x538-xs.png 384w ,./media/posts/81/responsive/image-35-1024x538-sm.png 600w ,./media/posts/81/responsive/image-35-1024x538-md.png 768w ,./media/posts/81/responsive/image-35-1024x538-lg.png 1200w ,./media/posts/81/responsive/image-35-1024x538-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>付费的主题，目前看来，还是慎重，毕竟官方制作的免费主题，也是非常出彩的，尤其是我最喜欢的<strong><a rel="noreferrer noopener" href="https://demo.ghost.io/" data-type="URL" data-id="https://demo.ghost.io/" target="_blank">Casper</a></strong>。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":430,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-430"><img decoding="async" loading="lazy" src="./media/posts/81/demo.ghost_.io_.feature-1-1024x682.jpeg" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-xs.jpeg 384w ,./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-sm.jpeg 600w ,./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-md.jpeg 768w ,./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-lg.jpeg 1200w ,./media/posts/81/responsive/demo.ghost_.io_.feature-1-1024x682-xl.jpeg 1600w"  alt="demo.ghost.io.feature.jpeg" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>不是说完全复刻，我觉得，有一些设计上的细节，还是值得参考，尤其是，有些细节不知道该如何处理的时候，看看Casper，或许会有新的启发。Kadence的默认样式，也是非常漂亮的，但是我觉得，很多设定，还是Casper更好，因此，我对照Casper的设定，将首页的样式进行了微调。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>1.让多余的meta标签，保留分类、标题、日期、摘要，其他的都不显示、那么文章方块就更简洁。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>2.内容样式默认是一个个方块，改成不要方块的，这样图片跟标题、摘要宽度就一致，整体感更强。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>3.设定摘要为最多显示三行：<a href="https://notecore.net/post/1289" data-type="URL" data-id="https://notecore.net/post/1289" target="_blank" rel="noreferrer noopener"><strong>博客摘要美化-显示固定行数</strong></a>。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>4.页脚的版权显示也进行对照修改。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>还有其他的一些细节，很多还无法简单修改，那就放弃吧，例如，目前还没有找到一款能简单制作第一篇文章那样的大方块的方法。目前正在测试的是用Block来制作，我也在一个<strong><a rel="noreferrer noopener" data-type="URL" data-id="https://notecore.net/home" href="https://notecore.net/home" target="_blank">Home</a></strong>的页面进行调试和修改。WordPress的5.9将会全力推进全站编辑功能，或许，2022年的WordPress将会在可玩性上越来越让人激动。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+<!-- /wp:paragraph --></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +216,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

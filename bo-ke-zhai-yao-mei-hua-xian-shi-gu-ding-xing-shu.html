@@ -1,4 +1,217 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>博客摘要美化-显示固定行数 - Litenote</title><meta name="description" content="博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。 最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。 通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。 这个参数简单 display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-word; 第一步，添加额外CSS代码 用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。 比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。 .loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta { margin:&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./bo-ke-zhai-yao-mei-hua-xian-shi-gu-ding-xing-shu.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./bo-ke-zhai-yao-mei-hua-xian-shi-gu-ding-xing-shu.html"},"headline":"博客摘要美化-显示固定行数","datePublished":"2022-01-09T11:23","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/77/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg","height":1280,"width":1920},"description":"博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。 最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。 通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。 这个参数简单 display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-word; 第一步，添加额外CSS代码 用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。 比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。 .loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta { margin:&hellip;","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">博客摘要美化-显示固定行数</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2022-01-09T11:23" class="post__date">一月 9, 2022</time><div class="post__updated">Updated on <time datetime="2022-01-09T11:23" class="post__date">四月 16, 2022</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/77/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg" srcset="./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-xs.jpg 384w, ./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-sm.jpg 600w, ./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-md.jpg 768w, ./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-lg.jpg 1200w, ./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="1280" width="1920" alt=""></div></figure><div class="post__inner"><div class="post__entry"><p></p><p>博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。</p><p></p><p></p><p>最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。</p><p></p><p></p><figure class="wp-block-image size-large"><figure class="wp-image-430"><img decoding="async" loading="lazy" src="./media/posts/77/demo.ghost_.io_.feature-1-1024x682.jpeg" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-xs.jpeg 384w, ./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-sm.jpeg 600w, ./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-md.jpeg 768w, ./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-lg.jpeg 1200w, ./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-xl.jpeg 1600w" alt="demo.ghost.io.feature.jpeg"></figure></figure><p></p><p></p><p>通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。</p><p></p><p></p><figure class="wp-block-image size-large"><figure class="wp-image-1523"><img decoding="async" loading="lazy" src="./media/posts/77/image-8-1-1024x497.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/77/responsive/image-8-1-1024x497-xs.png 384w, ./media/posts/77/responsive/image-8-1-1024x497-sm.png 600w, ./media/posts/77/responsive/image-8-1-1024x497-md.png 768w, ./media/posts/77/responsive/image-8-1-1024x497-lg.png 1200w, ./media/posts/77/responsive/image-8-1-1024x497-xl.png 1600w" alt=""></figure></figure><p></p><p></p><p>这个参数简单</p><p></p><p></p><pre class="wp-block-code"><code>display: -webkit-box;<restore-line-break>-webkit-line-clamp: 3;<restore-line-break>-webkit-box-orient: vertical;<restore-line-break>word-break: break-word;</restore-line-break></restore-line-break></restore-line-break></code></pre><p></p><p></p><p><strong>第一步，添加额外CSS代码</strong></p><p></p><p></p><p>用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。</p><p></p><p></p><p>比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。</p><p></p><p></p><pre class="wp-block-code"><code>.loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta {<restore-line-break>    margin: 1em 0;<restore-line-break>    display: -webkit-box;<restore-line-break>    overflow-y: hidden;<restore-line-break>    -webkit-line-clamp: 3;<restore-line-break>    -webkit-box-orient: vertical;<restore-line-break>    word-break: break-word;<restore-line-break>}</restore-line-break></restore-line-break></restore-line-break></restore-line-break></restore-line-break></restore-line-break></restore-line-break></code></pre><p></p><p></p><p><strong>第二步，修改摘要文字长度。</strong>这要看情况，摘要文字的长度（数量）要稍微多一点，要保证摘要的文字多于3行，不然截取3行就没有意义了吧。</p><p></p><p></p><p>备注，你可以修行行数为任何值。</p><p></p></div><footer class="post__footer"><div class="post__tag-share"><div class="post__share"></div></div></footer></div></article></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>博客摘要美化-显示固定行数 - Litenote </title>
+        <meta name="description" content="博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。 最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。 通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。 这个参数简单 display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-word; 第一步，添加额外CSS代码 用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。 比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。 .loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta { margin:&hellip;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./bo-ke-zhai-yao-mei-hua-xian-shi-gu-ding-xing-shu.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./bo-ke-zhai-yao-mei-hua-xian-shi-gu-ding-xing-shu.html"},"headline":"博客摘要美化-显示固定行数","datePublished":"2022-01-09T11:23","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/77/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg","height":1280,"width":1920},"description":"博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。 最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。 通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。 这个参数简单 display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-word; 第一步，添加额外CSS代码 用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。 比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。 .loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta { margin:&hellip;","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               博客摘要美化-显示固定行数
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2022-01-09T11:23" class="post__date">
+                                 一月 9, 2022
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2022-01-09T11:23" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/77/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg"
+                           srcset="./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-xs.jpg 384w ,./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-sm.jpg 600w ,./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-md.jpg 768w ,./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-lg.jpg 1200w ,./media/posts/77/responsive/hal-gatewood-tZc3vjPCk-Q-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1280"
+                        width="1920"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:paragraph --></p>
+<p>博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":430,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-430"><img decoding="async" loading="lazy" src="./media/posts/77/demo.ghost_.io_.feature-1-1024x682.jpeg" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-xs.jpeg 384w ,./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-sm.jpeg 600w ,./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-md.jpeg 768w ,./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-lg.jpeg 1200w ,./media/posts/77/responsive/demo.ghost_.io_.feature-1-1024x682-xl.jpeg 1600w"  alt="demo.ghost.io.feature.jpeg" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":1523,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-1523"><img decoding="async" loading="lazy" src="./media/posts/77/image-8-1-1024x497.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/77/responsive/image-8-1-1024x497-xs.png 384w ,./media/posts/77/responsive/image-8-1-1024x497-sm.png 600w ,./media/posts/77/responsive/image-8-1-1024x497-md.png 768w ,./media/posts/77/responsive/image-8-1-1024x497-lg.png 1200w ,./media/posts/77/responsive/image-8-1-1024x497-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>这个参数简单</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>display: -webkit-box;<restore-line-break>-webkit-line-clamp: 3;<restore-line-break>-webkit-box-orient: vertical;<restore-line-break>word-break: break-word;</code></pre>
+<p>
+<!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>第一步，添加额外CSS代码</strong></p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>.loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta {<restore-line-break>    margin: 1em 0;<restore-line-break>    display: -webkit-box;<restore-line-break>    overflow-y: hidden;<restore-line-break>    -webkit-line-clamp: 3;<restore-line-break>    -webkit-box-orient: vertical;<restore-line-break>    word-break: break-word;<restore-line-break>}</code></pre>
+<p>
+<!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>第二步，修改摘要文字长度。</strong>这要看情况，摘要文字的长度（数量）要稍微多一点，要保证摘要的文字多于3行，不然截取3行就没有意义了吧。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>备注，你可以修行行数为任何值。</p>
+<p>
+<!-- /wp:paragraph --></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +225,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

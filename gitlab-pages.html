@@ -1,4 +1,223 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>什么是GitLab Pages ? - Litenote</title><meta name="description" content="首先，什么是GitLab Pages？ 简而言之，GitLab Pages 是一个静态托管环境。你可能会问，什么是静态托管环境？ 简单地说，它是一个允许你托管一个由静态文件组成的网站的平台。这些静态文件通常是HTML、CSS和JavaScript文件以及一些图片。你可以通过手动或使用静态网站生成器把它们放在一起。 GitLab Pages是以其背后的公司GitLab命名的，该公司提供了一个通过高效协作和自动化许多工作流程来管理软件项目的平台。作为GitLab平台的一项功能，GitLab Pages最初是为了提供更多关于平台上的项目、用户和组的信息。为了实现这一目的，静态网站的文件首先需要存储在GitLab仓库中。然后，额外的设置将使该网站公开可用。 关于GitLab页面，显然还有很多内容。我稍后会给你一个更详细的描述。但首先，我想解决你在这个时候可能有的一个合理的担忧。你可能会问，为什么要在Gitlab Pages上托管你的网站？ 当涉及到主机时，你最关心的是什么？ 你是否担心: 支付过高的费用？ 无法处理大量的流量？ 被网页浏览器标记为不安全？ 因为你的网站加载速度太慢而把一些钱留在桌上？ 如果你担心支付过高的费用，那么以我的愚见，Gitlab是你非常好的选择。 你可能期望GitLab Pages提供一个慷慨的免费层，因为这就是FreeTiers的意义，或者至少是公平的价格，不是吗？那么，这就更好了。&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./gitlab-pages.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./gitlab-pages.html"},"headline":"什么是GitLab Pages ?","datePublished":"2021-12-02T21:39","dateModified":"2021-12-07T18:00","image":{"@type":"ImageObject","url":"./media/posts/6/lee-campbell-DtDlVpy-vvQ-unsplash.jpg","height":1602,"width":2400},"description":"首先，什么是GitLab Pages？ 简而言之，GitLab Pages 是一个静态托管环境。你可能会问，什么是静态托管环境？ 简单地说，它是一个允许你托管一个由静态文件组成的网站的平台。这些静态文件通常是HTML、CSS和JavaScript文件以及一些图片。你可以通过手动或使用静态网站生成器把它们放在一起。 GitLab Pages是以其背后的公司GitLab命名的，该公司提供了一个通过高效协作和自动化许多工作流程来管理软件项目的平台。作为GitLab平台的一项功能，GitLab Pages最初是为了提供更多关于平台上的项目、用户和组的信息。为了实现这一目的，静态网站的文件首先需要存储在GitLab仓库中。然后，额外的设置将使该网站公开可用。 关于GitLab页面，显然还有很多内容。我稍后会给你一个更详细的描述。但首先，我想解决你在这个时候可能有的一个合理的担忧。你可能会问，为什么要在Gitlab Pages上托管你的网站？ 当涉及到主机时，你最关心的是什么？ 你是否担心: 支付过高的费用？ 无法处理大量的流量？ 被网页浏览器标记为不安全？ 因为你的网站加载速度太慢而把一些钱留在桌上？ 如果你担心支付过高的费用，那么以我的愚见，Gitlab是你非常好的选择。 你可能期望GitLab Pages提供一个慷慨的免费层，因为这就是FreeTiers的意义，或者至少是公平的价格，不是吗？那么，这就更好了。&hellip;","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">什么是GitLab Pages ?</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2021-12-02T21:39" class="post__date">十二月 2, 2021</time><div class="post__updated">Updated on <time datetime="2021-12-02T21:39" class="post__date">十二月 7, 2021</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/6/lee-campbell-DtDlVpy-vvQ-unsplash.jpg" srcset="./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-xs.jpg 384w, ./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-sm.jpg 600w, ./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-md.jpg 768w, ./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-lg.jpg 1200w, ./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="1602" width="2400" alt=""></div></figure><div class="post__inner"><div class="post__entry"><h1 id="首先，什么是gitlab-pages？">首先，什么是GitLab Pages？</h1><p>简而言之，GitLab Pages 是一个静态托管环境。你可能会问，什么是静态托管环境？</p><p>简单地说，它是一个允许你托管一个由静态文件组成的网站的平台。这些静态文件通常是HTML、CSS和JavaScript文件以及一些图片。你可以通过手动或使用静态网站生成器把它们放在一起。</p><p>GitLab Pages是以其背后的公司GitLab命名的，该公司提供了一个通过高效协作和自动化许多工作流程来管理软件项目的平台。作为GitLab平台的一项功能，GitLab Pages最初是为了提供更多关于平台上的项目、用户和组的信息。为了实现这一目的，静态网站的文件首先需要存储在GitLab仓库中。然后，额外的设置将使该网站公开可用。</p><p>关于GitLab页面，显然还有很多内容。我稍后会给你一个更详细的描述。但首先，我想解决你在这个时候可能有的一个合理的担忧。你可能会问，为什么要在Gitlab Pages上托管你的网站？</p><h1 id="为什么要在gitlab-pages上托管你的静态网站？">为什么要在GitLab Pages上托管你的静态网站？</h1><p>当涉及到主机时，你最关心的是什么？</p><p>你是否担心:</p><p>支付过高的费用？ 无法处理大量的流量？ 被网页浏览器标记为不安全？ 因为你的网站加载速度太慢而把一些钱留在桌上？ 如果你担心支付过高的费用，那么以我的愚见，Gitlab是你非常好的选择。</p><p>你可能期望GitLab Pages提供一个慷慨的免费层，因为这就是FreeTiers的意义，或者至少是公平的价格，不是吗？那么，这就更好了。</p><p>GitLab Pages是完全免费的。首先，你可以免费托管你的网站，但是，你已经知道了。而且，你可以为你的任何网站指定你想要的自定义域名。如果你没有，有免费的gitlab.io子域可用。它们被默认分配给你的网站，根据其名称和类型。</p><p>这里有一个默认子域分配模式的总结。所有gitlab.io子域都启用了SSL。这意味着你的网站的URL地址将以https为前缀，而不是http。否则，网络浏览器会将你的网站标记为不安全的。可以肯定的是，这不是一个与你的访客建立信任的好方法。</p><p>至于自定义域名，你也可以免费为其启用SSL。你只需要事先在注册商的仪表板上为你的DNS记录添加一条文本（TXT）记录，以证明你对自定义域名的所有权。这样做之后，Let’s Encrypt会自动为你的自定义域名添加一个免费的SSL证书。</p><p>而且你知道吗？在GitLab Pages上托管的网站没有规定带宽限制。换句话说，无论你有多少访客，在GitLab Pages上托管你的网站都是免费的。你会认为这其中一定有什么隐藏的陷阱，对吗？好吧，如果你的使用量过大，GitLab Pages的团队可能会与你联系。就我个人而言，我不认为这是个陷阱。而达到这个门槛，会带来很多盈利的机会，让你开始考虑付费的替代品。因此，这并不是真正需要担心的事情。</p><p>除了无限制的带宽，对你的网站的可用性也没有限制，就像你在其他免费托管平台上可能发现的那样。你甚至可以通过将GitLab Pages与Cloudflare这样的CDN（内容交付网络）供应商联系起来，节省一些带宽，使你的网站更快。此外，你可以在你的项目中与尽可能多的合作者一起工作。更不用说所有这些好处都是完全免费的。</p><p>最重要的是，你可以免费托管无限数量的网站，并具有上述所有功能。这不是很好吗？是的，当然了。但在使用GitLab Pages之前，你必须牢记一些限制。</p><p>首先，组成网站的文件大小不能超过10GB。这实际上是对托管在GitLab上的源代码库的大小限制，GitLab Pages背后的平台就是这样的。接下来，GitLab Pages上没有办法托管服务器网站技术。换句话说，那些需要由计算机处理的文件，在每次访问者来到你的网站时都要生成一个输出，在GitLab Pages上是行不通的。要处理这类文件，你需要一个动态主机提供商，比如Hostinger、Heroku，以及它们的同类产品。现在，这里有一些值得考虑的GitLab Pages的免费替代品。</p><h1 id="gitlab-pages的免费替代品">GitLab Pages的免费替代品</h1><p>在阅读了关于GitLab Pages的限制之后，你可能想知道一些替代的免费托管供应商，无论是静态的还是动态的。</p><h2 id="免费的动态替代方案">免费的动态替代方案</h2><p>如果你对静态网站不感兴趣，可以看看这些GitLab Pages的免费动态替代品。</p><h3 id="endless-hosting">Endless Hosting</h3><p>提供了:</p><p>300 MB 存储空间。 免费SSL。 PHP。 MySQL。 FTP。 免费的子域。 电子邮件、DNS、漂亮的面板用户界面…… <a href="https://theendlessweb.com">https://theendlessweb.com</a></p><h3 id="freehostia">Freehostia</h3><p>Freehostia提供免费的主机服务，包括业界最好的控制面板和一键安装50多个免费应用程序。</p><p>你可以立即建立你的网站，没有任何强制广告。</p><p>要了解更多关于Freehostia的信息，请到他们的官方网站 : <a href="https://www.freehostia.com/">https://www.freehostia.com/</a></p><h2 id="免费的静态网站替代品">免费的静态网站替代品</h2><p>另一方面，如果你已经爱上了静态网站及其托管商所带来的简单性、速度和所有其他好处，那么这里有一些GitLab Pages的最佳静态替代品。</p><h3 id="github-pages">GitHub Pages</h3><p>GitHub Pages是一种类似于GitLab Pages的服务。基本上，它允许你从GitHub仓库托管一个静态网站。它有不同的免费层级限制，与GitLab Pages相比，它的使用条款更为严格。尽管如此，它是一个经过时间考验的GitLab Pages的替代品，有许多有用的资源可以免费使用。</p><p><a href="https://pages.github.com">https://pages.github.com</a></p><h3 id="netlify">Netlify</h3><p>Netlify可以被认为是静态网站托管领域的独角兽。它可以免费使用，包括100GB数据和100GB/月带宽限制。通过在Netlify上托管你的静态网站，你可以获得许多额外的功能，除非你知道你的网络开发方式，否则你可能不会在其他地方找到。</p><p>请在 <a href="https://netlify.com">https://netlify.com</a> 上查看</p><h3 id="aws-s3">AWS S3</h3><p>AWS S3是一个由亚马逊网络服务提供的静态文件托管解决方案。它也可以用于托管一个静态网站，并进行一些额外的设置。尽管它可能比其替代品更复杂一些，但它值得一试。</p><p>在<a href="https://aws.amazon.com/free">https://aws.amazon.com/free</a> 开始使用AWS S3</p></div><footer class="post__footer"><div class="post__tag-share"><div class="post__tag"><h3 class="post__tag__title">Posted in</h3><ul class="post__tag__list"><li><a href="./tags/wang-zhan/">网站</a></li></ul></div><div class="post__share"></div></div></footer></div></article></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>什么是GitLab Pages ? - Litenote </title>
+        <meta name="description" content="首先，什么是GitLab Pages？ 简而言之，GitLab Pages 是一个静态托管环境。你可能会问，什么是静态托管环境？ 简单地说，它是一个允许你托管一个由静态文件组成的网站的平台。这些静态文件通常是HTML、CSS和JavaScript文件以及一些图片。你可以通过手动或使用静态网站生成器把它们放在一起。 GitLab Pages是以其背后的公司GitLab命名的，该公司提供了一个通过高效协作和自动化许多工作流程来管理软件项目的平台。作为GitLab平台的一项功能，GitLab Pages最初是为了提供更多关于平台上的项目、用户和组的信息。为了实现这一目的，静态网站的文件首先需要存储在GitLab仓库中。然后，额外的设置将使该网站公开可用。 关于GitLab页面，显然还有很多内容。我稍后会给你一个更详细的描述。但首先，我想解决你在这个时候可能有的一个合理的担忧。你可能会问，为什么要在Gitlab Pages上托管你的网站？ 当涉及到主机时，你最关心的是什么？ 你是否担心: 支付过高的费用？ 无法处理大量的流量？ 被网页浏览器标记为不安全？ 因为你的网站加载速度太慢而把一些钱留在桌上？ 如果你担心支付过高的费用，那么以我的愚见，Gitlab是你非常好的选择。 你可能期望GitLab Pages提供一个慷慨的免费层，因为这就是FreeTiers的意义，或者至少是公平的价格，不是吗？那么，这就更好了。&hellip;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./gitlab-pages.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./gitlab-pages.html"},"headline":"什么是GitLab Pages ?","datePublished":"2021-12-02T21:39","dateModified":"2021-12-07T18:00","image":{"@type":"ImageObject","url":"./media/posts/6/lee-campbell-DtDlVpy-vvQ-unsplash.jpg","height":1602,"width":2400},"description":"首先，什么是GitLab Pages？ 简而言之，GitLab Pages 是一个静态托管环境。你可能会问，什么是静态托管环境？ 简单地说，它是一个允许你托管一个由静态文件组成的网站的平台。这些静态文件通常是HTML、CSS和JavaScript文件以及一些图片。你可以通过手动或使用静态网站生成器把它们放在一起。 GitLab Pages是以其背后的公司GitLab命名的，该公司提供了一个通过高效协作和自动化许多工作流程来管理软件项目的平台。作为GitLab平台的一项功能，GitLab Pages最初是为了提供更多关于平台上的项目、用户和组的信息。为了实现这一目的，静态网站的文件首先需要存储在GitLab仓库中。然后，额外的设置将使该网站公开可用。 关于GitLab页面，显然还有很多内容。我稍后会给你一个更详细的描述。但首先，我想解决你在这个时候可能有的一个合理的担忧。你可能会问，为什么要在Gitlab Pages上托管你的网站？ 当涉及到主机时，你最关心的是什么？ 你是否担心: 支付过高的费用？ 无法处理大量的流量？ 被网页浏览器标记为不安全？ 因为你的网站加载速度太慢而把一些钱留在桌上？ 如果你担心支付过高的费用，那么以我的愚见，Gitlab是你非常好的选择。 你可能期望GitLab Pages提供一个慷慨的免费层，因为这就是FreeTiers的意义，或者至少是公平的价格，不是吗？那么，这就更好了。&hellip;","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               什么是GitLab Pages ?
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-12-02T21:39" class="post__date">
+                                 十二月 2, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-12-02T21:39" class="post__date">
+                                       十二月 7, 2021
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/6/lee-campbell-DtDlVpy-vvQ-unsplash.jpg"
+                           srcset="./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-xs.jpg 384w ,./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-sm.jpg 600w ,./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-md.jpg 768w ,./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-lg.jpg 1200w ,./media/posts/6/responsive/lee-campbell-DtDlVpy-vvQ-unsplash-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1602"
+                        width="2400"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <h1 id="首先，什么是gitlab-pages？">首先，什么是GitLab Pages？</h1>
+<p>简而言之，GitLab Pages 是一个静态托管环境。你可能会问，什么是静态托管环境？</p>
+<p>简单地说，它是一个允许你托管一个由静态文件组成的网站的平台。这些静态文件通常是HTML、CSS和JavaScript文件以及一些图片。你可以通过手动或使用静态网站生成器把它们放在一起。</p>
+<p>GitLab Pages是以其背后的公司GitLab命名的，该公司提供了一个通过高效协作和自动化许多工作流程来管理软件项目的平台。作为GitLab平台的一项功能，GitLab Pages最初是为了提供更多关于平台上的项目、用户和组的信息。为了实现这一目的，静态网站的文件首先需要存储在GitLab仓库中。然后，额外的设置将使该网站公开可用。</p>
+<p>关于GitLab页面，显然还有很多内容。我稍后会给你一个更详细的描述。但首先，我想解决你在这个时候可能有的一个合理的担忧。你可能会问，为什么要在Gitlab Pages上托管你的网站？</p>
+<h1 id="为什么要在gitlab-pages上托管你的静态网站？">为什么要在GitLab Pages上托管你的静态网站？</h1>
+<p>当涉及到主机时，你最关心的是什么？</p>
+<p>你是否担心:</p>
+<p>支付过高的费用？
+无法处理大量的流量？
+被网页浏览器标记为不安全？
+因为你的网站加载速度太慢而把一些钱留在桌上？
+如果你担心支付过高的费用，那么以我的愚见，Gitlab是你非常好的选择。</p>
+<p>你可能期望GitLab Pages提供一个慷慨的免费层，因为这就是FreeTiers的意义，或者至少是公平的价格，不是吗？那么，这就更好了。</p>
+<p>GitLab Pages是完全免费的。首先，你可以免费托管你的网站，但是，你已经知道了。而且，你可以为你的任何网站指定你想要的自定义域名。如果你没有，有免费的gitlab.io子域可用。它们被默认分配给你的网站，根据其名称和类型。</p>
+<p>这里有一个默认子域分配模式的总结。所有gitlab.io子域都启用了SSL。这意味着你的网站的URL地址将以https为前缀，而不是http。否则，网络浏览器会将你的网站标记为不安全的。可以肯定的是，这不是一个与你的访客建立信任的好方法。</p>
+<p>至于自定义域名，你也可以免费为其启用SSL。你只需要事先在注册商的仪表板上为你的DNS记录添加一条文本（TXT）记录，以证明你对自定义域名的所有权。这样做之后，Let’s Encrypt会自动为你的自定义域名添加一个免费的SSL证书。</p>
+<p>而且你知道吗？在GitLab Pages上托管的网站没有规定带宽限制。换句话说，无论你有多少访客，在GitLab Pages上托管你的网站都是免费的。你会认为这其中一定有什么隐藏的陷阱，对吗？好吧，如果你的使用量过大，GitLab Pages的团队可能会与你联系。就我个人而言，我不认为这是个陷阱。而达到这个门槛，会带来很多盈利的机会，让你开始考虑付费的替代品。因此，这并不是真正需要担心的事情。</p>
+<p>除了无限制的带宽，对你的网站的可用性也没有限制，就像你在其他免费托管平台上可能发现的那样。你甚至可以通过将GitLab Pages与Cloudflare这样的CDN（内容交付网络）供应商联系起来，节省一些带宽，使你的网站更快。此外，你可以在你的项目中与尽可能多的合作者一起工作。更不用说所有这些好处都是完全免费的。</p>
+<p>最重要的是，你可以免费托管无限数量的网站，并具有上述所有功能。这不是很好吗？是的，当然了。但在使用GitLab Pages之前，你必须牢记一些限制。</p>
+<p>首先，组成网站的文件大小不能超过10GB。这实际上是对托管在GitLab上的源代码库的大小限制，GitLab Pages背后的平台就是这样的。接下来，GitLab Pages上没有办法托管服务器网站技术。换句话说，那些需要由计算机处理的文件，在每次访问者来到你的网站时都要生成一个输出，在GitLab Pages上是行不通的。要处理这类文件，你需要一个动态主机提供商，比如Hostinger、Heroku，以及它们的同类产品。现在，这里有一些值得考虑的GitLab Pages的免费替代品。</p>
+<h1 id="gitlab-pages的免费替代品">GitLab Pages的免费替代品</h1>
+<p>在阅读了关于GitLab Pages的限制之后，你可能想知道一些替代的免费托管供应商，无论是静态的还是动态的。</p>
+<h2 id="免费的动态替代方案">免费的动态替代方案</h2>
+<p>如果你对静态网站不感兴趣，可以看看这些GitLab Pages的免费动态替代品。</p>
+<h3 id="endless-hosting">Endless Hosting</h3>
+<p>提供了:</p>
+<p>300 MB 存储空间。
+免费SSL。
+PHP。
+MySQL。
+FTP。
+免费的子域。
+电子邮件、DNS、漂亮的面板用户界面……
+<a href="https://theendlessweb.com">https://theendlessweb.com</a></p>
+<h3 id="freehostia">Freehostia</h3>
+<p>Freehostia提供免费的主机服务，包括业界最好的控制面板和一键安装50多个免费应用程序。</p>
+<p>你可以立即建立你的网站，没有任何强制广告。</p>
+<p>要了解更多关于Freehostia的信息，请到他们的官方网站 : <a href="https://www.freehostia.com/">https://www.freehostia.com/</a></p>
+<h2 id="免费的静态网站替代品">免费的静态网站替代品</h2>
+<p>另一方面，如果你已经爱上了静态网站及其托管商所带来的简单性、速度和所有其他好处，那么这里有一些GitLab Pages的最佳静态替代品。</p>
+<h3 id="github-pages">GitHub Pages</h3>
+<p>GitHub Pages是一种类似于GitLab Pages的服务。基本上，它允许你从GitHub仓库托管一个静态网站。它有不同的免费层级限制，与GitLab Pages相比，它的使用条款更为严格。尽管如此，它是一个经过时间考验的GitLab Pages的替代品，有许多有用的资源可以免费使用。</p>
+<p><a href="https://pages.github.com">https://pages.github.com</a></p>
+<h3 id="netlify">Netlify</h3>
+<p>Netlify可以被认为是静态网站托管领域的独角兽。它可以免费使用，包括100GB数据和100GB/月带宽限制。通过在Netlify上托管你的静态网站，你可以获得许多额外的功能，除非你知道你的网络开发方式，否则你可能不会在其他地方找到。</p>
+<p>请在 <a href="https://netlify.com">https://netlify.com</a> 上查看</p>
+<h3 id="aws-s3">AWS S3</h3>
+<p>AWS S3是一个由亚马逊网络服务提供的静态文件托管解决方案。它也可以用于托管一个静态网站，并进行一些额外的设置。尽管它可能比其替代品更复杂一些，但它值得一试。</p>
+<p>在<a href="https://aws.amazon.com/free">https://aws.amazon.com/free</a> 开始使用AWS S3</p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+                           <div class="post__tag">
+                              <h3 class="post__tag__title">Posted in</h3>
+                              <ul class="post__tag__list">
+                                    <li>
+                                       <a href="./tags/wang-zhan/">网站</a>
+                                    </li>
+                              </ul>
+                           </div>
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +231,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

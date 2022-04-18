@@ -1,4 +1,180 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Excel 多重条件选择 - Litenote</title><meta name="description" content="Excel是很高级的软件，功能十分强大，其实呢很多很多功能都用不上。但是如果要进行一些稍微复炸的工作，往往又不直观，需要相对较多的流程。近期因工作上需要进行多重选择操作，于是在网上学习，然后整理了一个操作流程，在这里写一个备忘记录吧。 假设有一个很长的名单，每个人对应项目A、B、C，需要进行多条件选择。 第一步，我们要理解两个区域：列表区域和条件区域，列表区域就是我们要筛选的表，条件区域就是我们设定的筛选条件，请注意，条件区域跟列表的筛选的项目一致。 第二步，点击“数据”框，找到筛选旁边的高级，然后就会出现一个对话框。 第三步，按照对话框的要求，把“列表区域”“条件区域”分别在表格里找到，系统会自动填入对话框，如下图。点击确定就可以得到我们要的结果了。 “并”逻辑关系要筛选出同时满足A、B、C三个条件。 例如，我们要选出A、B、C都为“是”，就可以如下操作： “或”逻辑关系，就是只要满足任何一个条件的都要筛选出来，例如，我要从名单中，项目A或者B或者C为“是”的都要筛选出来。此时，条件区域需要改变，分别放进不同的行里，然后就可以得到项目A、B、C满足一个或多个的名单了。"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./excel-duo-chong-tiao-jian-xuan-ze.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./excel-duo-chong-tiao-jian-xuan-ze.html"},"headline":"Excel 多重条件选择","datePublished":"2021-07-12T02:03","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/48/lukas-blazek-mcSDtbWXUZU-unsplash-1.jpg","height":1272,"width":1920},"description":"Excel是很高级的软件，功能十分强大，其实呢很多很多功能都用不上。但是如果要进行一些稍微复炸的工作，往往又不直观，需要相对较多的流程。近期因工作上需要进行多重选择操作，于是在网上学习，然后整理了一个操作流程，在这里写一个备忘记录吧。 假设有一个很长的名单，每个人对应项目A、B、C，需要进行多条件选择。 第一步，我们要理解两个区域：列表区域和条件区域，列表区域就是我们要筛选的表，条件区域就是我们设定的筛选条件，请注意，条件区域跟列表的筛选的项目一致。 第二步，点击“数据”框，找到筛选旁边的高级，然后就会出现一个对话框。 第三步，按照对话框的要求，把“列表区域”“条件区域”分别在表格里找到，系统会自动填入对话框，如下图。点击确定就可以得到我们要的结果了。 “并”逻辑关系要筛选出同时满足A、B、C三个条件。 例如，我们要选出A、B、C都为“是”，就可以如下操作： “或”逻辑关系，就是只要满足任何一个条件的都要筛选出来，例如，我要从名单中，项目A或者B或者C为“是”的都要筛选出来。此时，条件区域需要改变，分别放进不同的行里，然后就可以得到项目A、B、C满足一个或多个的名单了。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">Excel 多重条件选择</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2021-07-12T02:03" class="post__date">七月 12, 2021</time><div class="post__updated">Updated on <time datetime="2021-07-12T02:03" class="post__date">四月 16, 2022</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/48/lukas-blazek-mcSDtbWXUZU-unsplash-1.jpg" srcset="./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-xs.jpg 384w, ./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-sm.jpg 600w, ./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-md.jpg 768w, ./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-lg.jpg 1200w, ./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="1272" width="1920" alt=""></div></figure><div class="post__inner"><div class="post__entry"><p>Excel是很高级的软件，功能十分强大，其实呢很多很多功能都用不上。但是如果要进行一些稍微复炸的工作，往往又不直观，需要相对较多的流程。近期因工作上需要进行多重选择操作，于是在网上学习，然后整理了一个操作流程，在这里写一个备忘记录吧。</p><hr><h2 id="%E9%AB%98%E7%BA%A7%E7%AD%9B%E9%80%89%E6%93%8D%E4%BD%9C">高级筛选操作</h2><p><strong><strong>假设有一个很长的名单，每个人对应项目A、B、C，需要进行多条件选择。</strong></strong><br><strong><strong>第一步</strong></strong>，我们要<strong><strong>理解</strong></strong>两个区域：列表区域和条件区域，<strong><strong>列表区域</strong></strong>就是我们要筛选的表，<strong><strong>条件区域</strong></strong>就是我们设定的筛选条件，请注意，条件区域跟列表的筛选的项目一致。</p><figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-1.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-1-xs.png 384w, ./media/posts/48/responsive/image-1-sm.png 600w, ./media/posts/48/responsive/image-1-md.png 768w, ./media/posts/48/responsive/image-1-lg.png 1200w, ./media/posts/48/responsive/image-1-xl.png 1600w" alt loading="lazy" width="964" height="707" srcset="https://notecore.one/content/images/size/w600/2021/07/image-1.png 600w, ./media/posts/48/image-1.png 964w" sizes="(min-width: 720px) 720px"></figure></figure><p><strong><strong>第二步</strong></strong>，点击“数据”框，找到筛选旁边的高级，然后就会出现一个对话框。<br><strong><strong>第三步</strong></strong>，按照对话框的要求，把“列表区域”“条件区域”分别在表格里找到，系统会自动填入对话框，如下图。点击确定就可以得到我们要的结果了。</p><figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-2.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-2-xs.png 384w, ./media/posts/48/responsive/image-2-sm.png 600w, ./media/posts/48/responsive/image-2-md.png 768w, ./media/posts/48/responsive/image-2-lg.png 1200w, ./media/posts/48/responsive/image-2-xl.png 1600w" alt loading="lazy" width="1024" height="776" srcset="https://notecore.one/content/images/size/w600/2021/07/image-2.png 600w, https://notecore.one/content/images/size/w1000/2021/07/image-2.png 1000w, ./media/posts/48/image-2.png 1024w" sizes="(min-width: 720px) 720px"></figure></figure><h2 id="%E2%80%9C%E5%B9%B6%E2%80%9D%E9%80%BB%E8%BE%91%E5%85%B3%E7%B3%BB">“并”逻辑关系</h2><p>“并”逻辑关系要筛选出同时满足A、B、C三个条件。<br>例如，我们要选出A、B、C都为“是”，就可以如下操作：</p><figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-3.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-3-xs.png 384w, ./media/posts/48/responsive/image-3-sm.png 600w, ./media/posts/48/responsive/image-3-md.png 768w, ./media/posts/48/responsive/image-3-lg.png 1200w, ./media/posts/48/responsive/image-3-xl.png 1600w" alt loading="lazy" width="1024" height="508" srcset="https://notecore.one/content/images/size/w600/2021/07/image-3.png 600w, https://notecore.one/content/images/size/w1000/2021/07/image-3.png 1000w, ./media/posts/48/image-3.png 1024w" sizes="(min-width: 720px) 720px"></figure></figure><h2 id="%E2%80%9C%E6%88%96%E2%80%9D%E9%80%BB%E8%BE%91%E5%85%B3%E7%B3%BB">“或”逻辑关系</h2><p>“或”逻辑关系，就是只要满足任何一个条件的都要筛选出来，例如，我要从名单中，项目A或者B或者C为“是”的都要筛选出来。此时，条件区域需要改变，分别放进不同的行里，然后就可以得到项目A、B、C满足一个或多个的名单了。</p><figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-4.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-4-xs.png 384w, ./media/posts/48/responsive/image-4-sm.png 600w, ./media/posts/48/responsive/image-4-md.png 768w, ./media/posts/48/responsive/image-4-lg.png 1200w, ./media/posts/48/responsive/image-4-xl.png 1600w" alt loading="lazy" width="1024" height="598" srcset="https://notecore.one/content/images/size/w600/2021/07/image-4.png 600w, https://notecore.one/content/images/size/w1000/2021/07/image-4.png 1000w, ./media/posts/48/image-4.png 1024w" sizes="(min-width: 720px) 720px"></figure></figure></div><footer class="post__footer"><div class="post__tag-share"><div class="post__share"></div></div></footer></div></article></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Excel 多重条件选择 - Litenote </title>
+        <meta name="description" content="Excel是很高级的软件，功能十分强大，其实呢很多很多功能都用不上。但是如果要进行一些稍微复炸的工作，往往又不直观，需要相对较多的流程。近期因工作上需要进行多重选择操作，于是在网上学习，然后整理了一个操作流程，在这里写一个备忘记录吧。 假设有一个很长的名单，每个人对应项目A、B、C，需要进行多条件选择。 第一步，我们要理解两个区域：列表区域和条件区域，列表区域就是我们要筛选的表，条件区域就是我们设定的筛选条件，请注意，条件区域跟列表的筛选的项目一致。 第二步，点击“数据”框，找到筛选旁边的高级，然后就会出现一个对话框。 第三步，按照对话框的要求，把“列表区域”“条件区域”分别在表格里找到，系统会自动填入对话框，如下图。点击确定就可以得到我们要的结果了。 “并”逻辑关系要筛选出同时满足A、B、C三个条件。 例如，我们要选出A、B、C都为“是”，就可以如下操作： “或”逻辑关系，就是只要满足任何一个条件的都要筛选出来，例如，我要从名单中，项目A或者B或者C为“是”的都要筛选出来。此时，条件区域需要改变，分别放进不同的行里，然后就可以得到项目A、B、C满足一个或多个的名单了。" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./excel-duo-chong-tiao-jian-xuan-ze.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./excel-duo-chong-tiao-jian-xuan-ze.html"},"headline":"Excel 多重条件选择","datePublished":"2021-07-12T02:03","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/48/lukas-blazek-mcSDtbWXUZU-unsplash-1.jpg","height":1272,"width":1920},"description":"Excel是很高级的软件，功能十分强大，其实呢很多很多功能都用不上。但是如果要进行一些稍微复炸的工作，往往又不直观，需要相对较多的流程。近期因工作上需要进行多重选择操作，于是在网上学习，然后整理了一个操作流程，在这里写一个备忘记录吧。 假设有一个很长的名单，每个人对应项目A、B、C，需要进行多条件选择。 第一步，我们要理解两个区域：列表区域和条件区域，列表区域就是我们要筛选的表，条件区域就是我们设定的筛选条件，请注意，条件区域跟列表的筛选的项目一致。 第二步，点击“数据”框，找到筛选旁边的高级，然后就会出现一个对话框。 第三步，按照对话框的要求，把“列表区域”“条件区域”分别在表格里找到，系统会自动填入对话框，如下图。点击确定就可以得到我们要的结果了。 “并”逻辑关系要筛选出同时满足A、B、C三个条件。 例如，我们要选出A、B、C都为“是”，就可以如下操作： “或”逻辑关系，就是只要满足任何一个条件的都要筛选出来，例如，我要从名单中，项目A或者B或者C为“是”的都要筛选出来。此时，条件区域需要改变，分别放进不同的行里，然后就可以得到项目A、B、C满足一个或多个的名单了。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               Excel 多重条件选择
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-07-12T02:03" class="post__date">
+                                 七月 12, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-07-12T02:03" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/48/lukas-blazek-mcSDtbWXUZU-unsplash-1.jpg"
+                           srcset="./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-xs.jpg 384w ,./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-sm.jpg 600w ,./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-md.jpg 768w ,./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-lg.jpg 1200w ,./media/posts/48/responsive/lukas-blazek-mcSDtbWXUZU-unsplash-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1272"
+                        width="1920"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p>Excel是很高级的软件，功能十分强大，其实呢很多很多功能都用不上。但是如果要进行一些稍微复炸的工作，往往又不直观，需要相对较多的流程。近期因工作上需要进行多重选择操作，于是在网上学习，然后整理了一个操作流程，在这里写一个备忘记录吧。</p>
+<hr>
+<h2 id="%E9%AB%98%E7%BA%A7%E7%AD%9B%E9%80%89%E6%93%8D%E4%BD%9C">高级筛选操作</h2>
+<p><strong><strong>假设有一个很长的名单，每个人对应项目A、B、C，需要进行多条件选择。</strong></strong><br><strong><strong>第一步</strong></strong>，我们要<strong><strong>理解</strong></strong>两个区域：列表区域和条件区域，<strong><strong>列表区域</strong></strong>就是我们要筛选的表，<strong><strong>条件区域</strong></strong>就是我们设定的筛选条件，请注意，条件区域跟列表的筛选的项目一致。</p>
+<figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-1.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-1-xs.png 384w ,./media/posts/48/responsive/image-1-sm.png 600w ,./media/posts/48/responsive/image-1-md.png 768w ,./media/posts/48/responsive/image-1-lg.png 1200w ,./media/posts/48/responsive/image-1-xl.png 1600w"   alt loading="lazy" width="964" height="707" srcset="https://notecore.one/content/images/size/w600/2021/07/image-1.png 600w, ./media/posts/48/image-1.png 964w" sizes="(min-width: 720px) 720px"></figure></figure>
+<p><strong><strong>第二步</strong></strong>，点击“数据”框，找到筛选旁边的高级，然后就会出现一个对话框。<br><strong><strong>第三步</strong></strong>，按照对话框的要求，把“列表区域”“条件区域”分别在表格里找到，系统会自动填入对话框，如下图。点击确定就可以得到我们要的结果了。</p>
+<figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-2.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-2-xs.png 384w ,./media/posts/48/responsive/image-2-sm.png 600w ,./media/posts/48/responsive/image-2-md.png 768w ,./media/posts/48/responsive/image-2-lg.png 1200w ,./media/posts/48/responsive/image-2-xl.png 1600w"   alt loading="lazy" width="1024" height="776" srcset="https://notecore.one/content/images/size/w600/2021/07/image-2.png 600w, https://notecore.one/content/images/size/w1000/2021/07/image-2.png 1000w, ./media/posts/48/image-2.png 1024w" sizes="(min-width: 720px) 720px"></figure></figure>
+<h2 id="%E2%80%9C%E5%B9%B6%E2%80%9D%E9%80%BB%E8%BE%91%E5%85%B3%E7%B3%BB">“并”逻辑关系</h2>
+<p>“并”逻辑关系要筛选出同时满足A、B、C三个条件。<br>例如，我们要选出A、B、C都为“是”，就可以如下操作：</p>
+<figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-3.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-3-xs.png 384w ,./media/posts/48/responsive/image-3-sm.png 600w ,./media/posts/48/responsive/image-3-md.png 768w ,./media/posts/48/responsive/image-3-lg.png 1200w ,./media/posts/48/responsive/image-3-xl.png 1600w"   alt loading="lazy" width="1024" height="508" srcset="https://notecore.one/content/images/size/w600/2021/07/image-3.png 600w, https://notecore.one/content/images/size/w1000/2021/07/image-3.png 1000w, ./media/posts/48/image-3.png 1024w" sizes="(min-width: 720px) 720px"></figure></figure>
+<h2 id="%E2%80%9C%E6%88%96%E2%80%9D%E9%80%BB%E8%BE%91%E5%85%B3%E7%B3%BB">“或”逻辑关系</h2>
+<p>“或”逻辑关系，就是只要满足任何一个条件的都要筛选出来，例如，我要从名单中，项目A或者B或者C为“是”的都要筛选出来。此时，条件区域需要改变，分别放进不同的行里，然后就可以得到项目A、B、C满足一个或多个的名单了。</p>
+<figure class="kg-card kg-image-card"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/48/image-4.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/48/responsive/image-4-xs.png 384w ,./media/posts/48/responsive/image-4-sm.png 600w ,./media/posts/48/responsive/image-4-md.png 768w ,./media/posts/48/responsive/image-4-lg.png 1200w ,./media/posts/48/responsive/image-4-xl.png 1600w"   alt loading="lazy" width="1024" height="598" srcset="https://notecore.one/content/images/size/w600/2021/07/image-4.png 600w, https://notecore.one/content/images/size/w1000/2021/07/image-4.png 1000w, ./media/posts/48/image-4.png 1024w" sizes="(min-width: 720px) 720px"></figure></figure>
+
+
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +188,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

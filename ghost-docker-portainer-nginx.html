@@ -1,4 +1,239 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ghost Docker Portainer Nginx - Litenote</title><meta name="description" content="是的，写下这篇稿子也只是备忘而已。 比较方便安装和管理Docker的工具是Portainer，是一款图形化的管理工具，使用上非常便利，速度快而且稳定。但是，我还是更喜欢Cyberpanel，后面会专门记录。 管方教程，或者第三方教程。 按照官方教程或者第三方教程，安装好Portainer，打开http://ip:9000(默认端口)，然后登录。 这些都是简要配置好的，基本上都只需要简要配置就可以完成需要的功能。 一是Ghost，需要在env里面增加一条url https://域名，不然你点击home后，会跳转localhost。 二是简单配置filebrowser，将volume对应srv的记录与nginx的选择为一致，然后才能读取nginx的配置文件。 三是进入filebrowser，修改nginx参数，配置反向代理〔网上教程很多，就不赘述了〕，在portainer的container页面重启nginx，然后打开你的域名，就可以进入Ghost的主页了。 第四步，准备好域名和ssl证书（推荐使用Cloudflare管理域名，可以免费获取ssl证书），修改nginx的配置文件，然后Ghost博客就可以上线https站点了。"><meta name="generator" content="Publii Open-Source CMS for Static Site"><meta name="theme-color" content="#17181E" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)"><meta name="msapplication-navbutton-color" content="#D73A42"><meta name="apple-mobile-web-app-status-bar-style" content="#D73A42"><link rel="canonical" href="./ghost-docker-portainer-nginx.html"><link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./ghost-docker-portainer-nginx.html"},"headline":"Ghost Docker Portainer Nginx","datePublished":"2021-07-15T11:29","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/38/ghost-1-1-1.png","height":640,"width":1280},"description":"是的，写下这篇稿子也只是备忘而已。 比较方便安装和管理Docker的工具是Portainer，是一款图形化的管理工具，使用上非常便利，速度快而且稳定。但是，我还是更喜欢Cyberpanel，后面会专门记录。 管方教程，或者第三方教程。 按照官方教程或者第三方教程，安装好Portainer，打开http://ip:9000(默认端口)，然后登录。 这些都是简要配置好的，基本上都只需要简要配置就可以完成需要的功能。 一是Ghost，需要在env里面增加一条url https://域名，不然你点击home后，会跳转localhost。 二是简单配置filebrowser，将volume对应srv的记录与nginx的选择为一致，然后才能读取nginx的配置文件。 三是进入filebrowser，修改nginx参数，配置反向代理〔网上教程很多，就不赘述了〕，在portainer的container页面重启nginx，然后打开你的域名，就可以进入Ghost的主页了。 第四步，准备好域名和ssl证书（推荐使用Cloudflare管理域名，可以免费获取ssl证书），修改nginx的配置文件，然后Ghost博客就可以上线https站点了。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script></head><body class="lines"><div class="container lines lines--right"><header class="header"><a href="./" class="logo">Litenote</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"><li><a href="./" target="_self">HOME</a></li><li><a href="./tags/wang-zhan/" target="_self">网站</a></li><li><a href="./tags/yue-du/" target="_self">阅读</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__inner post__header"><h1 class="post__title">Ghost Docker Portainer Nginx</h1><div class="post__meta"><div class="post__meta__left"><a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">litenote</a></div><div class="post__meta__right"><time datetime="2021-07-15T11:29" class="post__date">七月 15, 2021</time><div class="post__updated">Updated on <time datetime="2021-07-15T11:29" class="post__date">四月 16, 2022</time></div></div></div></header><figure class="post__featured-image"><div class="post__featured-image__inner is-img-loading"><img src="./media/posts/38/ghost-1-1-1.png" srcset="./media/posts/38/responsive/ghost-1-1-1-xs.png 384w, ./media/posts/38/responsive/ghost-1-1-1-sm.png 600w, ./media/posts/38/responsive/ghost-1-1-1-md.png 768w, ./media/posts/38/responsive/ghost-1-1-1-lg.png 1200w, ./media/posts/38/responsive/ghost-1-1-1-xl.png 1600w" sizes="(min-width: 37.5em) 1600px, 80vw" loading="eager" height="640" width="1280" alt=""></div></figure><div class="post__inner"><div class="post__entry"><p>是的，写下这篇稿子也只是备忘而已。</p><p>比较方便安装和管理Docker的工具是Portainer，是一款图形化的管理工具，使用上非常便利，速度快而且稳定。但是，我还是更喜欢Cyberpanel，后面会专门记录。</p><h2 id="%E6%B5%81%E7%A8%8B">流程</h2><h3 id="1docker">1.Docker</h3><p>管方教程，或者第三方教程。</p><h3 id="2portainer">2.Portainer</h3><p>按照官方教程或者第三方教程，安装好Portainer，打开http://ip:9000(默认端口)，然后登录。</p><h3 id="3%E6%A8%A1%E6%9D%BF%E5%AE%89%E8%A3%85ghost%EF%BC%8Cnginx%EF%BC%8Cfilebrowser">3.模板安装Ghost，Nginx，filebrowser</h3><figure class="kg-card kg-image-card kg-width-wide"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/38/portainer.jpeg" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/38/responsive/portainer-xs.jpeg 384w, ./media/posts/38/responsive/portainer-sm.jpeg 600w, ./media/posts/38/responsive/portainer-md.jpeg 768w, ./media/posts/38/responsive/portainer-lg.jpeg 1200w, ./media/posts/38/responsive/portainer-xl.jpeg 1600w" alt loading="lazy" width="1788" height="562" srcset="https://notecore.one/content/images/size/w600/2021/07/portainer.jpeg 600w, https://notecore.one/content/images/size/w1000/2021/07/portainer.jpeg 1000w, https://notecore.one/content/images/size/w1600/2021/07/portainer.jpeg 1600w, ./media/posts/38/portainer.jpeg 1788w" sizes="(min-width: 1200px) 1200px"></figure></figure><h3 id="4%E9%85%8D%E7%BD%AE">4.配置</h3><p>这些都是简要配置好的，基本上都只需要简要配置就可以完成需要的功能。</p><p>一是Ghost，需要在env里面增加一条url https://域名，不然你点击home后，会跳转localhost。</p><p>二是简单配置filebrowser，将volume对应srv的记录与nginx的选择为一致，然后才能读取nginx的配置文件。</p><p>三是进入filebrowser，修改nginx参数，配置反向代理〔网上教程很多，就不赘述了〕，在portainer的container页面重启nginx，然后打开你的域名，就可以进入Ghost的主页了。</p><p>第四步，准备好域名和ssl证书（推荐使用Cloudflare管理域名，可以免费获取ssl证书），修改nginx的配置文件，然后Ghost博客就可以上线https站点了。</p></div><footer class="post__footer"><div class="post__tag-share"><div class="post__share"></div></div></footer></div></article><div class="post__related"><h3 class="post__related__title">Related posts</h3><div class="l-grid l-grid--2"><article class="c-card"><div class="c-card__wrapper"><figure class="c-card__image is-img-loading"><img src="./media/posts/46/demo.ghost_.io_.feature-1.jpeg" srcset="./media/posts/46/responsive/demo.ghost_.io_.feature-1-xs.jpeg 384w, ./media/posts/46/responsive/demo.ghost_.io_.feature-1-sm.jpeg 600w, ./media/posts/46/responsive/demo.ghost_.io_.feature-1-md.jpeg 768w, ./media/posts/46/responsive/demo.ghost_.io_.feature-1-lg.jpeg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw" loading="lazy" height="1191" width="1788" alt=""></figure><div class="c-card__content"><header><h2 class="c-card__title"><a href="./ghostzhu-ti-casper.html" class="invert">Ghost主题Casper</a></h2></header><footer class="c-card__meta"></footer></div></div></article><article class="c-card"><div class="c-card__wrapper"><figure class="c-card__image is-img-loading"><img src="./media/posts/36/f-ghost-4.0-1.jpg" srcset="./media/posts/36/responsive/f-ghost-4.0-1-xs.jpg 384w, ./media/posts/36/responsive/f-ghost-4.0-1-sm.jpg 600w, ./media/posts/36/responsive/f-ghost-4.0-1-md.jpg 768w, ./media/posts/36/responsive/f-ghost-4.0-1-lg.jpg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw" loading="lazy" height="708" width="1420" alt=""></figure><div class="c-card__content"><header><h2 class="c-card__title"><a href="./ghostbo-ke-xi-tong-xin-de-xuan-ze.html" class="invert">Ghost博客系统—新的选择</a></h2></header><footer class="c-card__meta"></footer></div></div></article></div></div></main><footer class="footer"><div class="footer__left"><div class="footer__copy">LITENOTE © 2022 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备19040787号-2</a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="./assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script><script>function publiiDetectLoadedImages () {
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Ghost Docker Portainer Nginx - Litenote </title>
+        <meta name="description" content="是的，写下这篇稿子也只是备忘而已。 比较方便安装和管理Docker的工具是Portainer，是一款图形化的管理工具，使用上非常便利，速度快而且稳定。但是，我还是更喜欢Cyberpanel，后面会专门记录。 管方教程，或者第三方教程。 按照官方教程或者第三方教程，安装好Portainer，打开http://ip:9000(默认端口)，然后登录。 这些都是简要配置好的，基本上都只需要简要配置就可以完成需要的功能。 一是Ghost，需要在env里面增加一条url https://域名，不然你点击home后，会跳转localhost。 二是简单配置filebrowser，将volume对应srv的记录与nginx的选择为一致，然后才能读取nginx的配置文件。 三是进入filebrowser，修改nginx参数，配置反向代理〔网上教程很多，就不赘述了〕，在portainer的container页面重启nginx，然后打开你的域名，就可以进入Ghost的主页了。 第四步，准备好域名和ssl证书（推荐使用Cloudflare管理域名，可以免费获取ssl证书），修改nginx的配置文件，然后Ghost博客就可以上线https站点了。" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+			<meta name="theme-color" content="#17181E"  media="(prefers-color-scheme: dark)">
+	    	<meta name="theme-color" content="#D73A42" media="(prefers-color-scheme: light)">
+	    	<meta name="msapplication-navbutton-color" content="#D73A42">
+	    	<meta name="apple-mobile-web-app-status-bar-style" content="#D73A42">
+    	
+        <link rel="canonical" href="./ghost-docker-portainer-nginx.html">
+        
+        
+        
+        <link rel="stylesheet" href="./assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./ghost-docker-portainer-nginx.html"},"headline":"Ghost Docker Portainer Nginx","datePublished":"2021-07-15T11:29","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./media/posts/38/ghost-1-1-1.png","height":640,"width":1280},"description":"是的，写下这篇稿子也只是备忘而已。 比较方便安装和管理Docker的工具是Portainer，是一款图形化的管理工具，使用上非常便利，速度快而且稳定。但是，我还是更喜欢Cyberpanel，后面会专门记录。 管方教程，或者第三方教程。 按照官方教程或者第三方教程，安装好Portainer，打开http://ip:9000(默认端口)，然后登录。 这些都是简要配置好的，基本上都只需要简要配置就可以完成需要的功能。 一是Ghost，需要在env里面增加一条url https://域名，不然你点击home后，会跳转localhost。 二是简单配置filebrowser，将volume对应srv的记录与nginx的选择为一致，然后才能读取nginx的配置文件。 三是进入filebrowser，修改nginx参数，配置反向代理〔网上教程很多，就不赘述了〕，在portainer的container页面重启nginx，然后打开你的域名，就可以进入Ghost的主页了。 第四步，准备好域名和ssl证书（推荐使用Cloudflare管理域名，可以免费获取ssl证书），修改nginx的配置文件，然后Ghost博客就可以上线https站点了。","author":{"@type":"Person","name":"litenote","url":"./authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               Ghost Docker Portainer Nginx
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-07-15T11:29" class="post__date">
+                                 七月 15, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-07-15T11:29" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./media/posts/38/ghost-1-1-1.png"
+                           srcset="./media/posts/38/responsive/ghost-1-1-1-xs.png 384w ,./media/posts/38/responsive/ghost-1-1-1-sm.png 600w ,./media/posts/38/responsive/ghost-1-1-1-md.png 768w ,./media/posts/38/responsive/ghost-1-1-1-lg.png 1200w ,./media/posts/38/responsive/ghost-1-1-1-xl.png 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="640"
+                        width="1280"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p>是的，写下这篇稿子也只是备忘而已。</p>
+<p>比较方便安装和管理Docker的工具是Portainer，是一款图形化的管理工具，使用上非常便利，速度快而且稳定。但是，我还是更喜欢Cyberpanel，后面会专门记录。</p>
+<h2 id="%E6%B5%81%E7%A8%8B">流程</h2>
+<h3 id="1docker">1.Docker</h3>
+<p>管方教程，或者第三方教程。</p>
+<h3 id="2portainer">2.Portainer</h3>
+<p>按照官方教程或者第三方教程，安装好Portainer，打开http://ip:9000(默认端口)，然后登录。</p>
+<h3 id="3%E6%A8%A1%E6%9D%BF%E5%AE%89%E8%A3%85ghost%EF%BC%8Cnginx%EF%BC%8Cfilebrowser">3.模板安装Ghost，Nginx，filebrowser</h3>
+<figure class="kg-card kg-image-card kg-width-wide"><figure class="kg-image"><img decoding="async" loading="lazy" src="./media/posts/38/portainer.jpeg" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./media/posts/38/responsive/portainer-xs.jpeg 384w ,./media/posts/38/responsive/portainer-sm.jpeg 600w ,./media/posts/38/responsive/portainer-md.jpeg 768w ,./media/posts/38/responsive/portainer-lg.jpeg 1200w ,./media/posts/38/responsive/portainer-xl.jpeg 1600w"   alt loading="lazy" width="1788" height="562" srcset="https://notecore.one/content/images/size/w600/2021/07/portainer.jpeg 600w, https://notecore.one/content/images/size/w1000/2021/07/portainer.jpeg 1000w, https://notecore.one/content/images/size/w1600/2021/07/portainer.jpeg 1600w, ./media/posts/38/portainer.jpeg 1788w" sizes="(min-width: 1200px) 1200px"></figure></figure>
+<h3 id="4%E9%85%8D%E7%BD%AE">4.配置</h3>
+<p>这些都是简要配置好的，基本上都只需要简要配置就可以完成需要的功能。</p>
+<p>一是Ghost，需要在env里面增加一条url https://域名，不然你点击home后，会跳转localhost。</p>
+<p>二是简单配置filebrowser，将volume对应srv的记录与nginx的选择为一致，然后才能读取nginx的配置文件。</p>
+<p>三是进入filebrowser，修改nginx参数，配置反向代理〔网上教程很多，就不赘述了〕，在portainer的container页面重启nginx，然后打开你的域名，就可以进入Ghost的主页了。</p>
+<p>第四步，准备好域名和ssl证书（推荐使用Cloudflare管理域名，可以免费获取ssl证书），修改nginx的配置文件，然后Ghost博客就可以上线https站点了。</p>
+
+
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+         <div class="post__related">
+            <h3 class="post__related__title">
+               Related posts
+            </h3>
+            <div class="l-grid l-grid--2">
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./media/posts/46/demo.ghost_.io_.feature-1.jpeg"
+                                          srcset="./media/posts/46/responsive/demo.ghost_.io_.feature-1-xs.jpeg 384w ,./media/posts/46/responsive/demo.ghost_.io_.feature-1-sm.jpeg 600w ,./media/posts/46/responsive/demo.ghost_.io_.feature-1-md.jpeg 768w ,./media/posts/46/responsive/demo.ghost_.io_.feature-1-lg.jpeg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="1191"
+                                    width="1788"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./ghostzhu-ti-casper.html" class="invert">
+                                    Ghost主题Casper
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./media/posts/36/f-ghost-4.0-1.jpg"
+                                          srcset="./media/posts/36/responsive/f-ghost-4.0-1-xs.jpg 384w ,./media/posts/36/responsive/f-ghost-4.0-1-sm.jpg 600w ,./media/posts/36/responsive/f-ghost-4.0-1-md.jpg 768w ,./media/posts/36/responsive/f-ghost-4.0-1-lg.jpg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="708"
+                                    width="1420"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./ghostbo-ke-xi-tong-xin-de-xuan-ze.html" class="invert">
+                                    Ghost博客系统—新的选择
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+            </div>
+         </div>
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
          var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
          for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
@@ -12,4 +247,13 @@
             }
          }
       }
-      publiiDetectLoadedImages();</script></body></html>
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>
