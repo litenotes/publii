@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Ghost code injection 修改主题 - Litenote </title>
+        <meta name="description" content="不满意主题的部分参数，于是试图通过修改主题来实现，但是多次尝试还是失败。突然想到Ghost可以通过code injection来配置。确实简单快速实现了想要的效果。 默认主题Casper 4.x版本有一个我很喜欢的设置，就是Excerpt截取3行，而不是数字数。这样的好处，就是整个版面非常整齐，同时也不用考虑中、英文字数的差异导致的问题。 这里需要一个CSS参数 display: -webkit-box; overflow-y: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-break: break-word; 使用浏览器的开发者工具，定位你需要截取的位置，例如， 然后，在Settings→Code injection，添加如下配置，就可以实现任意宽度下，截图3行文字。 &lt;style&gt; p.gh-article-excerpt{&hellip;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="./../ghost-code-injection-xiu-gai-zhu-ti/">
+        
+        
+        
+        <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../ghost-code-injection-xiu-gai-zhu-ti/"},"headline":"Ghost code injection 修改主题","datePublished":"2021-10-19T02:28","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./../media/posts/64/f-ghost-4.0-1.jpg","height":708,"width":1420},"description":"不满意主题的部分参数，于是试图通过修改主题来实现，但是多次尝试还是失败。突然想到Ghost可以通过code injection来配置。确实简单快速实现了想要的效果。 默认主题Casper 4.x版本有一个我很喜欢的设置，就是Excerpt截取3行，而不是数字数。这样的好处，就是整个版面非常整齐，同时也不用考虑中、英文字数的差异导致的问题。 这里需要一个CSS参数 display: -webkit-box; overflow-y: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-break: break-word; 使用浏览器的开发者工具，定位你需要截取的位置，例如， 然后，在Settings→Code injection，添加如下配置，就可以实现任意宽度下，截图3行文字。 &lt;style&gt; p.gh-article-excerpt{&hellip;","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./../" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./../"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               Ghost code injection 修改主题
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./../authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-10-19T02:28" class="post__date">
+                                 十月 19, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-10-19T02:28" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./../media/posts/64/f-ghost-4.0-1.jpg"
+                           srcset="./../media/posts/64/responsive/f-ghost-4.0-1-xs.jpg 384w ,./../media/posts/64/responsive/f-ghost-4.0-1-sm.jpg 600w ,./../media/posts/64/responsive/f-ghost-4.0-1-md.jpg 768w ,./../media/posts/64/responsive/f-ghost-4.0-1-lg.jpg 1200w ,./../media/posts/64/responsive/f-ghost-4.0-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="708"
+                        width="1420"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p>不满意主题的部分参数，于是试图通过修改主题来实现，但是多次尝试还是失败。突然想到Ghost可以通过code injection来配置。确实简单快速实现了想要的效果。</p>
+<p>默认主题Casper 4.x版本有一个我很喜欢的设置，就是Excerpt截取3行，而不是数字数。这样的好处，就是整个版面非常整齐，同时也不用考虑中、英文字数的差异导致的问题。</p>
+<p>这里需要一个CSS参数</p>
+<p><!--kg-card-begin: markdown--></p>
+<p><code>display: -webkit-box;</code>
+<code>overflow-y: hidden;</code>
+<code>-webkit-line-clamp: 3;</code>
+<code>-webkit-box-orient: vertical;</code>
+<code>word-break: break-word;</code></p>
+<p><!--kg-card-end: markdown--></p>
+<p>使用浏览器的开发者工具，定位你需要截取的位置，例如，</p>
+<figure class="kg-card kg-image-card"><figure class="kg-image"><img loading="lazy" src="./../media/posts/64/codein.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./../media/posts/64/responsive/codein-xs.png 384w ,./../media/posts/64/responsive/codein-sm.png 600w ,./../media/posts/64/responsive/codein-md.png 768w ,./../media/posts/64/responsive/codein-lg.png 1200w ,./../media/posts/64/responsive/codein-xl.png 1600w"   alt="" loading="lazy"></figure></figure>
+<p>
+然后，在Settings→Code injection，添加如下配置，就可以实现任意宽度下，截图3行文字。</p>
+<p><!--kg-card-begin: markdown--></p>
+<p><code>&lt;style&gt;</code>
+<code> p.gh-article-excerpt{</code>
+<code> font-size: 2.0rem;</code>
+<code> display: -webkit-box;</code>
+<code> overflow-y: hidden;</code>
+<code> -webkit-line-clamp: 3;</code>
+<code> -webkit-box-orient: vertical;</code>
+<code> word-break: break-word;</code>
+<code> }</code>
+<code>&lt;/style&gt;</code></p>
+<p><!--kg-card-end: markdown--></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+         <div class="post__related">
+            <h3 class="post__related__title">
+               Related posts
+            </h3>
+            <div class="l-grid l-grid--2">
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./../media/posts/38/ghost-1-1-1.png"
+                                          srcset="./../media/posts/38/responsive/ghost-1-1-1-xs.png 384w ,./../media/posts/38/responsive/ghost-1-1-1-sm.png 600w ,./../media/posts/38/responsive/ghost-1-1-1-md.png 768w ,./../media/posts/38/responsive/ghost-1-1-1-lg.png 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="640"
+                                    width="1280"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./../ghost-docker-portainer-nginx/" class="invert">
+                                    Ghost Docker Portainer Nginx
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./../media/posts/36/f-ghost-4.0-1.jpg"
+                                          srcset="./../media/posts/36/responsive/f-ghost-4.0-1-xs.jpg 384w ,./../media/posts/36/responsive/f-ghost-4.0-1-sm.jpg 600w ,./../media/posts/36/responsive/f-ghost-4.0-1-md.jpg 768w ,./../media/posts/36/responsive/f-ghost-4.0-1-lg.jpg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="708"
+                                    width="1420"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./../ghostbo-ke-xi-tong-xin-de-xuan-ze/" class="invert">
+                                    Ghost博客系统—新的选择
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+            </div>
+         </div>
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./../assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./../assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

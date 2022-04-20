@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Publii快速搭建静态博客网站</title>
+        <meta name="description" content="这里谈一下Windows平台可视化界面静态网站生产工具Publii搭建静态博客的方法，Publii是要给非常简单、高效、低门槛的静态网站生成器，同时编辑界面美观、主题大气、安全稳定的优点。" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="./../2210/">
+        
+        
+        
+        <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../2210/"},"headline":"Publii快速搭建静态博客网站","datePublished":"2022-04-20T22:23","dateModified":"2022-04-20T22:25","image":{"@type":"ImageObject","url":"./../media/posts/99/photo-1621570273800-1b50b0173a97.jpg","height":1500,"width":2000},"description":"这里谈一下Windows平台可视化界面静态网站生产工具Publii搭建静态博客的方法，Publii是要给非常简单、高效、低门槛的静态网站生成器，同时编辑界面美观、主题大气、安全稳定的优点。","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./../" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./../"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               Publii快速搭建静态博客网站
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./../authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2022-04-20T22:23" class="post__date">
+                                 四月 20, 2022
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2022-04-20T22:23" class="post__date">
+                                       四月 20, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./../media/posts/99/photo-1621570273800-1b50b0173a97.jpg"
+                           srcset="./../media/posts/99/responsive/photo-1621570273800-1b50b0173a97-xs.jpg 384w ,./../media/posts/99/responsive/photo-1621570273800-1b50b0173a97-sm.jpg 600w ,./../media/posts/99/responsive/photo-1621570273800-1b50b0173a97-md.jpg 768w ,./../media/posts/99/responsive/photo-1621570273800-1b50b0173a97-lg.jpg 1200w ,./../media/posts/99/responsive/photo-1621570273800-1b50b0173a97-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1500"
+                        width="2000"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               
+  <p>
+    这里谈一下Windows平台可视化界面静态网站生产工具Publii搭建静态博客的方法，Publii是要给非常简单、高效、低门槛的静态网站生成器，同时编辑界面美观、主题大气、安全稳定的优点。
+  </p>
+
+    <h2>
+      架构
+    </h2>
+
+  <p>
+    <strong>编辑器</strong>：Publii<br><br><strong>代码托管</strong>：Gitlab或者Github，<br><br><strong>网站托管</strong>：Netlify、Gitlab pages、Github pages或者腾讯云的Serverless。
+  </p>
+
+    <h2 id="netlify">
+      Netlify
+    </h2>
+
+  <p>
+    Netlify还真是一个好东西。后台界面就更简单清爽，同步速度那是相当快，网站的加载速度也非常快，配置自定义域名也很简单，总体来说，是非常值得一试的服务，绑定域名后，国内访问速度还可以接受，如果图片多了肯定还是不行，至于Gitlab pages、Github pages应该差不多，甚至更慢，如果要选免费的方案，我觉得Netlify更好。
+  </p>
+
+    <h2 id="serverless">
+      腾讯云Serverless托管静态网站
+    </h2>
+
+  <p>
+    之前腾讯做了一个Webify，这个本来是一个很简单的工具，直接导入Github、Gitlab的仓库，Publii制作的网站就可以部署上线，可惜，直到我的网站文章多了，我才发现，原来Webify不支持大于100M的网站，还有啥用？<br>不过，腾讯云的Serverless同样支持Gitlab仓库托管，经过测试，这里就没有文件大小限制，Serverless把文件导入储存桶，以储存桶的方式，来托管网站，异曲同工，还算美妙，也支持增量同步、自动触发，也就是说，Publii更新了文章，直接同步至Github仓库，那么Serverless就直接触发自动部署更新，很快新版本的网站就可以上线。
+  </p>
+
+    <h2>
+      打包上传至存储桶
+    </h2>
+
+  <p>
+    其实，Publii可以打包文件，把文件直接打包上传至存储桶，静态网站立马就可以访问，如果你的博客更新慢，完全可以通过这种方式来试试。当然，前面的方案更方便。
+  </p>
+
+    <h2>
+      备份数据
+    </h2>
+
+  <p>
+    Publii的一个非常好的优点，就是站点数据可以很方便地放到同步盘里面，不容易出错。我是通过坚果云来同步数据，几乎没有出现问题。
+  </p>
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./../assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./../assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

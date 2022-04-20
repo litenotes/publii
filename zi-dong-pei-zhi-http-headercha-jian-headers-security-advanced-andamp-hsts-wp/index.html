@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>自动配置Http Header插件Headers Security Advanced &amp;amp; HSTS WP - Litenote </title>
+        <meta name="description" content="最近试用了一款全自动配置WordPress Http Header的插件『Headers Security Advanced &amp; HSTS WP』，体验很好，最爱这种无需任何操作，全自动配置，且有效果的插件。 如果说提升WordPress，或者其他类型的网站的安全性，成本最低的方案，就是配置好Http Header。至于原理，其实没必要深研究，简单了解了。 Http Header最大的作用，并不是保护我们的服务器端，而是保护客户端。可以控制浏览器加载哪些内容、使用哪些资源、不加载哪些内容、不使用哪些资源，尤其是当服务器端被黑了后，可以极大地保护客户端的安全，配置好Http Header是对你的读者负责。 Also note that security headers are to&hellip;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="./../zi-dong-pei-zhi-http-headercha-jian-headers-security-advanced-andamp-hsts-wp/">
+        
+        
+        
+        <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../zi-dong-pei-zhi-http-headercha-jian-headers-security-advanced-andamp-hsts-wp/"},"headline":"自动配置Http Header插件Headers Security Advanced &amp; HSTS WP","datePublished":"2021-12-31T12:06","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./../media/posts/75/ilya-pavlov-OqtafYT5kTw-unsplash-1.jpg","height":1282,"width":1920},"description":"最近试用了一款全自动配置WordPress Http Header的插件『Headers Security Advanced &amp; HSTS WP』，体验很好，最爱这种无需任何操作，全自动配置，且有效果的插件。 如果说提升WordPress，或者其他类型的网站的安全性，成本最低的方案，就是配置好Http Header。至于原理，其实没必要深研究，简单了解了。 Http Header最大的作用，并不是保护我们的服务器端，而是保护客户端。可以控制浏览器加载哪些内容、使用哪些资源、不加载哪些内容、不使用哪些资源，尤其是当服务器端被黑了后，可以极大地保护客户端的安全，配置好Http Header是对你的读者负责。 Also note that security headers are to&hellip;","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./../" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./../"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               自动配置Http Header插件Headers Security Advanced &amp;amp; HSTS WP
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./../authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-12-31T12:06" class="post__date">
+                                 十二月 31, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-12-31T12:06" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./../media/posts/75/ilya-pavlov-OqtafYT5kTw-unsplash-1.jpg"
+                           srcset="./../media/posts/75/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-xs.jpg 384w ,./../media/posts/75/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-sm.jpg 600w ,./../media/posts/75/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-md.jpg 768w ,./../media/posts/75/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-lg.jpg 1200w ,./../media/posts/75/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1282"
+                        width="1920"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:paragraph --></p>
+<p>最近试用了一款全自动配置WordPress Http Header的插件『<a rel="noreferrer noopener" data-type="URL" data-id="https://wordpress.org/plugins/headers-security-advanced-hsts-wp/#:~:text=Headers%20Security%20Advanced%20%26%20HSTS%20WP%20is%20Best,or%20replace%20files%2C%20add%20rewrite%20or%20read%20rules." href="https://wordpress.org/plugins/headers-security-advanced-hsts-wp/#:~:text=Headers%20Security%20Advanced%20%26%20HSTS%20WP%20is%20Best,or%20replace%20files%2C%20add%20rewrite%20or%20read%20rules." target="_blank">Headers Security Advanced &amp; HSTS WP</a>』，体验很好，最爱这种无需任何操作，全自动配置，且有效果的插件。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>如果说提升WordPress，或者其他类型的网站的安全性，成本最低的方案，就是配置好Http Header。至于原理，其实没必要深研究，简单了解了。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Http Header最大的作用，并不是保护我们的服务器端，而是保护客户端。可以控制浏览器加载哪些内容、使用哪些资源、不加载哪些内容、不使用哪些资源，尤其是当服务器端被黑了后，可以极大地保护客户端的安全，<strong><span class="has-inline-color has-palette-color-2-color">配置好Http Header是对你的读者负责。</span></strong></p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:quote --></p>
+<blockquote class="wp-block-quote">
+<p>Also note that security headers are to provide security to your&nbsp;<em>website visitors</em>, NOT your web-server or your website. To secure your web-server or website, you’d be doing other things (like&nbsp;<a href="https://wpjohnny.com/nerd-guide-wordpress-firewall-security/">server firewalls</a>&nbsp;or&nbsp;<a href="https://wpjohnny.com/easy-wordpress-security-tips-without-slowing-performance/">WordPress application security</a>).</p>
+<p><cite><a href="https://wpjohnny.com/what-are-http-headers/">What are HTTP headers? (and why they’re useful) (wpjohnny.com)</a></cite></blockquote>
+<p>
+<!-- /wp:quote --></p>
+<p><!-- wp:image {"align":"wide","id":1248,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image alignwide size-large"><figure class="wp-image-1248"><img loading="lazy" src="./../media/posts/75/image-4-1024x372.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./../media/posts/75/responsive/image-4-1024x372-xs.png 384w ,./../media/posts/75/responsive/image-4-1024x372-sm.png 600w ,./../media/posts/75/responsive/image-4-1024x372-md.png 768w ,./../media/posts/75/responsive/image-4-1024x372-lg.png 1200w ,./../media/posts/75/responsive/image-4-1024x372-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>这款插件还可以修改<strong>后台登录链接<span class="has-inline-color has-palette-color-2-color">wp-admin</span></strong>为其他内容，还不错。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>开启后，去 <strong><a href="https://securityheaders.com/" data-type="URL" data-id="https://securityheaders.com/" target="_blank" rel="noreferrer noopener">SecurityHeaders</a></strong> 测试一下，效果确实好。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"align":"wide","id":1246,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image alignwide size-large"><figure class="wp-image-1246"><img loading="lazy" src="./../media/posts/75/image-3-1024x548.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./../media/posts/75/responsive/image-3-1024x548-xs.png 384w ,./../media/posts/75/responsive/image-3-1024x548-sm.png 600w ,./../media/posts/75/responsive/image-3-1024x548-md.png 768w ,./../media/posts/75/responsive/image-3-1024x548-lg.png 1200w ,./../media/posts/75/responsive/image-3-1024x548-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Http Header的重要性，可以参考如下文章。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://wpjohnny.com/what-are-http-headers/" target="_blank" rel="noreferrer noopener">What are HTTP headers? (and why they’re useful)</a></p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a rel="noreferrer noopener" href="https://wpjohnny.com/guide-to-security-headers/" target="_blank">Guide to Security Headers</a></p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>存在的问题</h2>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>1.会自动开启修改登录页面的功能。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>2.无法登录后台，提示浏览器未开启cookies，需要进一步测试，建议做好备份。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>3.如果服务器已经设置了部分http header，该插件自动生成的http header，那么去检测，就会提示有两个同样类型的http header。</p>
+<p>
+<!-- /wp:paragraph --></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+         <div class="post__related">
+            <h3 class="post__related__title">
+               Related posts
+            </h3>
+            <div class="l-grid l-grid--2">
+                  <article class="c-card">
+                     <div class="c-card__wrapper">
+                              <figure class="c-card__image is-img-loading">
+                                 <img
+                                    src="./../media/posts/59/f-dns-1.jpg"
+                                          srcset="./../media/posts/59/responsive/f-dns-1-xs.jpg 384w ,./../media/posts/59/responsive/f-dns-1-sm.jpg 600w ,./../media/posts/59/responsive/f-dns-1-md.jpg 768w ,./../media/posts/59/responsive/f-dns-1-lg.jpg 1200w" sizes="(min-width: 37.5em) 80vw, 50vw"
+                                     loading="lazy"
+                                    height="640"
+                                    width="1440"
+                                    alt="">
+                              </figure>
+                        <div class="c-card__content">
+                           <header>
+                              <h2 class="c-card__title">
+                                 <a href="./../dns-security-resources/" class="invert">
+                                    DNS Security Resources
+                                 </a>
+                              </h2>
+                           </header>
+                           
+                              <footer class="c-card__meta">
+                              </footer>
+                        </div>
+                     </div>
+                  </article>
+            </div>
+         </div>
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./../assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./../assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

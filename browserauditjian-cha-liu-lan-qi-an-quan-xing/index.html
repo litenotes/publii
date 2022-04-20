@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>BrowserAudit检查浏览器安全性 - Litenote </title>
+        <meta name="description" content="BrowserAudit是用来自动测试你所使用的浏览器的安全性能的工具网站，你只需要打开链接，点击Test me就可以开始测试，就可以了，整个测试过程需要浏览器测试400多个项目，因此耗时较长，需要耐心等待，通过更多的测试，就能发现更多的问题和风险。 我今天测试我现在使用的Edge浏览器，Win10系统，浏览器版本号为97.0.1072.62（64位），测试结果为" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="./../browserauditjian-cha-liu-lan-qi-an-quan-xing/">
+        
+        
+        
+        <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../browserauditjian-cha-liu-lan-qi-an-quan-xing/"},"headline":"BrowserAudit检查浏览器安全性","datePublished":"2022-01-15T11:40","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./../media/posts/85/emile-perron-xrVDYZRGdw4-unsplash-1.jpg","height":1350,"width":2400},"description":"BrowserAudit是用来自动测试你所使用的浏览器的安全性能的工具网站，你只需要打开链接，点击Test me就可以开始测试，就可以了，整个测试过程需要浏览器测试400多个项目，因此耗时较长，需要耐心等待，通过更多的测试，就能发现更多的问题和风险。 我今天测试我现在使用的Edge浏览器，Win10系统，浏览器版本号为97.0.1072.62（64位），测试结果为","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./../" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./../"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               BrowserAudit检查浏览器安全性
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./../authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2022-01-15T11:40" class="post__date">
+                                 一月 15, 2022
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2022-01-15T11:40" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./../media/posts/85/emile-perron-xrVDYZRGdw4-unsplash-1.jpg"
+                           srcset="./../media/posts/85/responsive/emile-perron-xrVDYZRGdw4-unsplash-1-xs.jpg 384w ,./../media/posts/85/responsive/emile-perron-xrVDYZRGdw4-unsplash-1-sm.jpg 600w ,./../media/posts/85/responsive/emile-perron-xrVDYZRGdw4-unsplash-1-md.jpg 768w ,./../media/posts/85/responsive/emile-perron-xrVDYZRGdw4-unsplash-1-lg.jpg 1200w ,./../media/posts/85/responsive/emile-perron-xrVDYZRGdw4-unsplash-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1350"
+                        width="2400"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:image {"id":1607,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-1607"><img loading="lazy" src="./../media/posts/85/image-15-1-1024x449.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./../media/posts/85/responsive/image-15-1-1024x449-xs.png 384w ,./../media/posts/85/responsive/image-15-1-1024x449-sm.png 600w ,./../media/posts/85/responsive/image-15-1-1024x449-md.png 768w ,./../media/posts/85/responsive/image-15-1-1024x449-lg.png 1200w ,./../media/posts/85/responsive/image-15-1-1024x449-xl.png 1600w"  alt="image-15" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p><a rel="noreferrer noopener" href="https://browseraudit.com/" target="_blank">BrowserAudit</a>是用来自动测试你所使用的浏览器的安全性能的工具网站，你只需要打开链接，点击Test me就可以开始测试，就可以了，整个测试过程需要浏览器测试400多个项目，因此耗时较长，需要耐心等待，通过更多的测试，就能发现更多的问题和风险。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>我今天测试我现在使用的Edge浏览器，Win10系统，浏览器版本号为97.0.1072.62（64位），测试结果为</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":1615,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-1615"><img loading="lazy" src="./../media/posts/85/image-18-1-1024x364.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./../media/posts/85/responsive/image-18-1-1024x364-xs.png 384w ,./../media/posts/85/responsive/image-18-1-1024x364-sm.png 600w ,./../media/posts/85/responsive/image-18-1-1024x364-md.png 768w ,./../media/posts/85/responsive/image-18-1-1024x364-lg.png 1200w ,./../media/posts/85/responsive/image-18-1-1024x364-xl.png 1600w"  alt="" /></figure></figure>
+<p>
+<!-- /wp:image --></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./../assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./../assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

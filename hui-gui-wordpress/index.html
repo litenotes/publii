@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>回归WordPress - Litenote </title>
+        <meta name="description" content="这是怪圈⭕，离开WordPress要写一篇文章，回归又要写一篇文章，然后分分离离无穷尽。现在再去看看当初选择Ghost的理由，都变得既不充分也不必要，很是好奇当初的选择。 本来呢，这就是成熟的过程。以现在的技术水平、折腾指数、甚至资金预算，去评价过去的选择，本来就是不公平的。 应该说，当初选择Ghost，也是明智的，因为那时已经有很长一段时间没有更新博客的热情，是Ghost给了我更新博客的一个动力，同时，这段时间的技术方面的积累，也是最丰富的。 时光不老，Ghost也从3代升级为4代，更多问题已经修复，易用性已经不错。不过，就前不久文章里提到的，Ghost升级太频繁，而且均是一些不痛不痒的小修补。同时，缺乏完整的备份，统计功能，主题的功能几乎没有。这些缺点一个都不改进，却在金钱的路上迷失。 之前选择Ghost，有一个重要的因素，就是极简的编辑界面，虽然不能说这种界面就有好的体验，其实在很多方面，编辑体验相当差，比如，插入图片，编辑表格，复制粘贴文本出错等。而且，经常都要去参看使用代码，反正复杂的格式是基本不会用了。总之，编辑体验很难让人好评。 回归WordPress，有几个因素。 EasyWP是域名商Namecheap旗下的Managed WordPress，几个月前用WordPress做了另外一个网站，当时经过充分的评估，定下来用的是域名服务商Namecheap旗下的EasyWP。到现在，这个网站已经有一段时间了，总体感觉还是很稳定快速。 EasyWP有强劲的性能，优雅的面板，快速的人工处理机制，免费的CDN，Starter折合人民币200元左右的包年价格，还是有很大吸引力。选择这样的服务商，最大的优势，就是免维护。经过我的测试，EasyWP的速度确实挺快，GTmetrix，web.dev上面的分数也很高，目前很满意。 服务器的维护，是很考验技术，经验和时间的。你要学习，要去实际操作，要运维，要付费。还好我去甲骨文云整了免费的VPS，不过使用过程中，还是不可避免产生一些不放心的念头，资料备份是随时都要做的，运维也是操心的。实际体验下来，还是挺费事的。玩玩就好，长期使用，还是不建议。 参考文章：原来是EasyWP上的WordPress更好，网站测试工具（测试EasyWP WordPress） JetPack逐渐被分离为一个子品牌，之前出了JetPack Boost体验就很好，反正这东西很玄学，似乎有用。官方也做了一个非常专业的测试，试图证明JetPack Boost的有效性。当然，速度这件事，硬件永远是第一位的，不要试图通过软件优化秒天秒地，真那样的话，全世界也就没有台积电什么事了。 其实回归还有一个重要原因，那就是JetPACK APP。从Ghost过来，WordPress手机版虽然优化?不错，但是编辑体验就真的太没意思了。尤其是第三方插件对编辑页的侵占太恶心，甚至存在页面显示错误的问题，编辑页面的体验，比Ghost就更糟糕了。JetPack APP基本上就是把WordPress APP站点管理的模块分离出来后，独立的一款软件，好评的是，文章的编辑体验，国内也能正常使用。手机?端也有丰富的区块编辑功能，而且体验还不错，难?难?。手机端发布文章居然可以像发微博一样便捷，总体好评。 插件，也是JetPack的重头戏，虽然是免费版，但基本上功能还不错，可以替代部分第三方插件，比如SEO、统计、安全、提速等插件，我以前都是每类都要装，然后不停地去学习，研究，对比，真的很繁琐，且这些插件未必就真的如介绍所说那么好。这次我下定决心，就用JetPack解决所有问题。&hellip;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="./../hui-gui-wordpress/">
+        
+        
+        
+        <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../hui-gui-wordpress/"},"headline":"回归WordPress","datePublished":"2021-12-22T22:02","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./../media/posts/70/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1.jpg","height":1281,"width":1919},"description":"这是怪圈⭕，离开WordPress要写一篇文章，回归又要写一篇文章，然后分分离离无穷尽。现在再去看看当初选择Ghost的理由，都变得既不充分也不必要，很是好奇当初的选择。 本来呢，这就是成熟的过程。以现在的技术水平、折腾指数、甚至资金预算，去评价过去的选择，本来就是不公平的。 应该说，当初选择Ghost，也是明智的，因为那时已经有很长一段时间没有更新博客的热情，是Ghost给了我更新博客的一个动力，同时，这段时间的技术方面的积累，也是最丰富的。 时光不老，Ghost也从3代升级为4代，更多问题已经修复，易用性已经不错。不过，就前不久文章里提到的，Ghost升级太频繁，而且均是一些不痛不痒的小修补。同时，缺乏完整的备份，统计功能，主题的功能几乎没有。这些缺点一个都不改进，却在金钱的路上迷失。 之前选择Ghost，有一个重要的因素，就是极简的编辑界面，虽然不能说这种界面就有好的体验，其实在很多方面，编辑体验相当差，比如，插入图片，编辑表格，复制粘贴文本出错等。而且，经常都要去参看使用代码，反正复杂的格式是基本不会用了。总之，编辑体验很难让人好评。 回归WordPress，有几个因素。 EasyWP是域名商Namecheap旗下的Managed WordPress，几个月前用WordPress做了另外一个网站，当时经过充分的评估，定下来用的是域名服务商Namecheap旗下的EasyWP。到现在，这个网站已经有一段时间了，总体感觉还是很稳定快速。 EasyWP有强劲的性能，优雅的面板，快速的人工处理机制，免费的CDN，Starter折合人民币200元左右的包年价格，还是有很大吸引力。选择这样的服务商，最大的优势，就是免维护。经过我的测试，EasyWP的速度确实挺快，GTmetrix，web.dev上面的分数也很高，目前很满意。 服务器的维护，是很考验技术，经验和时间的。你要学习，要去实际操作，要运维，要付费。还好我去甲骨文云整了免费的VPS，不过使用过程中，还是不可避免产生一些不放心的念头，资料备份是随时都要做的，运维也是操心的。实际体验下来，还是挺费事的。玩玩就好，长期使用，还是不建议。 参考文章：原来是EasyWP上的WordPress更好，网站测试工具（测试EasyWP WordPress） JetPack逐渐被分离为一个子品牌，之前出了JetPack Boost体验就很好，反正这东西很玄学，似乎有用。官方也做了一个非常专业的测试，试图证明JetPack Boost的有效性。当然，速度这件事，硬件永远是第一位的，不要试图通过软件优化秒天秒地，真那样的话，全世界也就没有台积电什么事了。 其实回归还有一个重要原因，那就是JetPACK APP。从Ghost过来，WordPress手机版虽然优化?不错，但是编辑体验就真的太没意思了。尤其是第三方插件对编辑页的侵占太恶心，甚至存在页面显示错误的问题，编辑页面的体验，比Ghost就更糟糕了。JetPack APP基本上就是把WordPress APP站点管理的模块分离出来后，独立的一款软件，好评的是，文章的编辑体验，国内也能正常使用。手机?端也有丰富的区块编辑功能，而且体验还不错，难?难?。手机端发布文章居然可以像发微博一样便捷，总体好评。 插件，也是JetPack的重头戏，虽然是免费版，但基本上功能还不错，可以替代部分第三方插件，比如SEO、统计、安全、提速等插件，我以前都是每类都要装，然后不停地去学习，研究，对比，真的很繁琐，且这些插件未必就真的如介绍所说那么好。这次我下定决心，就用JetPack解决所有问题。&hellip;","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./../" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./../"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               回归WordPress
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./../authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2021-12-22T22:02" class="post__date">
+                                 十二月 22, 2021
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2021-12-22T22:02" class="post__date">
+                                       四月 16, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./../media/posts/70/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1.jpg"
+                           srcset="./../media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-xs.jpg 384w ,./../media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-sm.jpg 600w ,./../media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-md.jpg 768w ,./../media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-lg.jpg 1200w ,./../media/posts/70/responsive/arnel-hasanovic-MNd-Rka1o0Q-unsplash-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1281"
+                        width="1919"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:paragraph --></p>
+<p>这是怪圈⭕，离开WordPress要写一篇文章，回归又要写一篇文章，然后分分离离无穷尽。现在再去看看当初选择Ghost的理由，都变得既不充分也不必要，很是好奇当初的选择。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>本来呢，这就是成熟的过程。以现在的技术水平、折腾指数、甚至资金预算，去评价过去的选择，本来就是不公平的。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Ghost使用体验</h2>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>应该说，当初选择Ghost，也是明智的，因为那时已经有很长一段时间没有更新博客的热情，是Ghost给了我更新博客的一个动力，同时，这段时间的技术方面的积累，也是最丰富的。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>时光不老，Ghost也从3代升级为4代，更多问题已经修复，易用性已经不错。不过，就前不久文章里提到的，Ghost升级太频繁，而且均是一些不痛不痒的小修补。同时，缺乏完整的备份，统计功能，主题的功能几乎没有。这些缺点一个都不改进，却在金钱的路上迷失。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>之前选择Ghost，有一个重要的因素，就是极简的编辑界面，虽然不能说这种界面就有好的体验，其实在很多方面，编辑体验相当差，比如，插入图片，编辑表格，复制粘贴文本出错等。而且，经常都要去参看使用代码，反正复杂的格式是基本不会用了。总之，编辑体验很难让人好评。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>回归WordPress</h2>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>回归WordPress，有几个因素。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>EasyWP</h3>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>EasyWP是域名商Namecheap旗下的Managed WordPress，几个月前用WordPress做了另外一个网站，当时经过充分的评估，定下来用的是域名服务商Namecheap旗下的EasyWP。到现在，这个网站已经有一段时间了，总体感觉还是很稳定快速。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>EasyWP有强劲的性能，优雅的面板，快速的人工处理机制，免费的CDN，Starter折合人民币200元左右的包年价格，还是有很大吸引力。选择这样的服务商，最大的优势，就是免维护。经过我的测试，EasyWP的速度确实挺快，GTmetrix，web.dev上面的分数也很高，目前很满意。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>服务器的维护，是很考验技术，经验和时间的。你要学习，要去实际操作，要运维，要付费。还好我去甲骨文云整了免费的VPS，不过使用过程中，还是不可避免产生一些不放心的念头，资料备份是随时都要做的，运维也是操心的。实际体验下来，还是挺费事的。玩玩就好，长期使用，还是不建议。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>参考文章：<a rel="noreferrer noopener" href="https://notecore.net/post/1193" target="_blank">原来是EasyWP上的WordPress更好</a>，<a rel="noreferrer noopener" href="https://notecore.net/post/1149" target="_blank">网站测试工具（测试EasyWP WordPress）</a></p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>JetPack</h3>
+<p>
+<!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>JetPack逐渐被分离为一个子品牌，之前出了JetPack Boost体验就很好，反正这东西很玄学，似乎有用。官方也做了一个非常专业的测试，试图证明JetPack Boost的有效性。当然，速度这件事，硬件永远是第一位的，不要试图通过软件优化秒天秒地，真那样的话，全世界也就没有台积电什么事了。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>其实回归还有一个重要原因，那就是JetPACK APP。从Ghost过来，WordPress手机版虽然优化?不错，但是编辑体验就真的太没意思了。尤其是第三方插件对编辑页的侵占太恶心，甚至存在页面显示错误的问题，编辑页面的体验，比Ghost就更糟糕了。JetPack APP基本上就是把WordPress APP站点管理的模块分离出来后，独立的一款软件，好评的是，文章的编辑体验，国内也能正常使用。手机?端也有丰富的区块编辑功能，而且体验还不错，难?难?。手机端发布文章居然可以像发微博一样便捷，总体好评。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>插件，也是JetPack的重头戏，虽然是免费版，但基本上功能还不错，可以替代部分第三方插件，比如SEO、统计、安全、提速等插件，我以前都是每类都要装，然后不停地去学习，研究，对比，真的很繁琐，且这些插件未必就真的如介绍所说那么好。这次我下定决心，就用JetPack解决所有问题。</p>
+<p>
+<!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>参考文章：<a rel="noreferrer noopener" href="https://notecore.net/post/1308" target="_blank">Jetpack使用体验</a>，<a rel="noreferrer noopener" href="https://notecore.net/post/460" target="_blank">Jetpack Boost</a>，<a rel="noreferrer noopener" href="https://notecore.net/post/1662" target="_blank">Kadence主题+Jetpack Boost让WordPress速度起飞</a></p>
+<p>
+<!-- /wp:paragraph --></p>
+
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./../assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./../assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>

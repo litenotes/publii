@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Database Cleanup：清理数据库顽固垃圾 - Litenote </title>
+        <meta name="description" content="我试过很多款垃圾清理工具，包括WP-Sweep，WP-Optimize等，虽然都是全面且功能强大的垃圾清理工具，但是对于部分顽固的插件，卸载后在数据库里面仍然会保留一部分内容，使用上面提到的这两款差价，是不能识别且清除的，那么，可以试试用Database Cleanup(Plugins Garbage Collector)来扫描无用垃圾并清除 。 例如，安装了BlogVault Backups这款插件，删除后，数据库会留下这几个数据表： 在WP-Sweep，WP-Optimize等插件里面都能识别几个数据表，但是并不能清理。使用Database Cleanup就能准确识别这些未使用的数据表，勾选以后点击删除即可，简单爽快。" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="./../database-cleanupqing-li-shu-ju-ku-wan-gu-la-ji/">
+        
+        
+        
+        <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../database-cleanupqing-li-shu-ju-ku-wan-gu-la-ji/"},"headline":"Database Cleanup：清理数据库顽固垃圾","datePublished":"2022-02-16T15:15","dateModified":"2022-04-17T13:54","image":{"@type":"ImageObject","url":"./../media/posts/91/ilya-pavlov-OqtafYT5kTw-unsplash-1.jpg","height":1282,"width":1920},"description":"我试过很多款垃圾清理工具，包括WP-Sweep，WP-Optimize等，虽然都是全面且功能强大的垃圾清理工具，但是对于部分顽固的插件，卸载后在数据库里面仍然会保留一部分内容，使用上面提到的这两款差价，是不能识别且清除的，那么，可以试试用Database Cleanup(Plugins Garbage Collector)来扫描无用垃圾并清除 。 例如，安装了BlogVault Backups这款插件，删除后，数据库会留下这几个数据表： 在WP-Sweep，WP-Optimize等插件里面都能识别几个数据表，但是并不能清理。使用Database Cleanup就能准确识别这些未使用的数据表，勾选以后点击删除即可，简单爽快。","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
+        
+        
+    </head>
+    <body class="lines">
+        
+        <div class="container lines lines--right"><header class="header">
+
+   <a href="./../" class="logo">
+         Litenote
+   </a>
+
+      <nav class="navbar js-navbar">
+         <button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button>
+         <ul class="navbar__menu">
+                  <li>
+                  <a
+                     href="./../"
+                        target="_self"
+         >
+                     HOME
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/wang-zhan/"
+                        target="_self"
+         >
+                     网站
+                  </a>
+         
+            </li>
+                  <li>
+                  <a
+                     href="./../tags/yue-du/"
+                        target="_self"
+         >
+                     阅读
+                  </a>
+         
+            </li>
+         </ul>      </nav>
+
+</header>
+<main class="main">
+      <article class="post">      
+         <header class="post__inner post__header">
+            <h1 class="post__title">
+               Database Cleanup：清理数据库顽固垃圾
+            </h1>
+               <div class="post__meta">
+                     <div class="post__meta__left">                        
+                           <a href="./../authors/litenote/" class="invert post__author" rel="author" title="litenote">
+                              litenote
+                           </a>
+                     </div>
+
+                     <div class="post__meta__right">
+                           <time datetime="2022-02-16T15:15" class="post__date">
+                                 二月 16, 2022
+                           </time>
+
+                              <div class="post__updated">
+                                 Updated on
+                                 <time datetime="2022-02-16T15:15" class="post__date">
+                                       四月 17, 2022
+                                 </time>
+                              </div>
+                     </div>
+               </div>
+         </header>
+
+               <figure class="post__featured-image ">
+                  <div class="post__featured-image__inner is-img-loading">
+                     <img
+                        src="./../media/posts/91/ilya-pavlov-OqtafYT5kTw-unsplash-1.jpg"
+                           srcset="./../media/posts/91/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-xs.jpg 384w ,./../media/posts/91/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-sm.jpg 600w ,./../media/posts/91/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-md.jpg 768w ,./../media/posts/91/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-lg.jpg 1200w ,./../media/posts/91/responsive/ilya-pavlov-OqtafYT5kTw-unsplash-1-xl.jpg 1600w" sizes="(min-width: 37.5em) 1600px, 80vw"
+                         loading="eager"
+                        height="1282"
+                        width="1920"
+                        alt="">
+                  </div>
+               </figure>
+
+         <div class="post__inner">
+            <div class="post__entry">
+               <p><!-- wp:paragraph --></p>
+<p>我试过很多款垃圾清理工具，包括WP-Sweep，WP-Optimize等，虽然都是全面且功能强大的垃圾清理工具，但是对于部分顽固的插件，卸载后在数据库里面仍然会保留一部分内容，使用上面提到的这两款差价，是不能识别且清除的，那么，可以试试用<strong>Database Cleanup</strong>(Plugins Garbage Collector)来扫描无用垃圾并清除 。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>例如，安装了BlogVault Backups这款插件，删除后，数据库会留下这几个数据表：</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:table --></p>
+<figure id="wpoptimize_table_list" class="wp-block-table">
+<table>
+<tbody>
+<tr>
+<td>wp_bv_activities_store</td>
+<td>8</td>
+<td>16.00 KB</td>
+<td>0 bytes</td>
+<td>InnoDB</td>
+</tr>
+<tr>
+<td>wp_bv_fw_requests</td>
+<td>405</td>
+<td>176.00 KB</td>
+<td>0 bytes</td>
+<td>InnoDB</td>
+</tr>
+<tr>
+<td>wp_bv_ip_store</td>
+<td>2,230</td>
+<td>128.00 KB</td>
+<td>80.00 KB</td>
+<td>InnoDB</td>
+</tr>
+<tr>
+<td>wp_bv_lp_requests</td>
+<td>85</td>
+<td>16.00 KB</td>
+<td>0 bytes</td>
+<td>InnoDB</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p><!-- /wp:table --></p>
+<p><!-- wp:paragraph --></p>
+<p>在WP-Sweep，WP-Optimize等插件里面都能识别几个数据表，但是并不能清理。使用Database Cleanup就能准确识别这些未使用的数据表，勾选以后点击删除即可，简单爽快。</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":2229,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><figure class="wp-image-2229"><img loading="lazy"  src="./../media/posts/91/image-1024x501.png" sizes="(min-width: 37.5em) 1600px, 80vw" srcset="./../media/posts/91/responsive/image-1024x501-xs.png 384w ,./../media/posts/91/responsive/image-1024x501-sm.png 600w ,./../media/posts/91/responsive/image-1024x501-md.png 768w ,./../media/posts/91/responsive/image-1024x501-lg.png 1200w ,./../media/posts/91/responsive/image-1024x501-xl.png 1600w"  alt=""></figure></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+            </div>
+
+					<footer class="post__footer">
+                  <div class="post__tag-share">
+                           <div class="post__tag">
+                              <h3 class="post__tag__title">Posted in</h3>
+                              <ul class="post__tag__list">
+                                    <li>
+                                       <a href="./../tags/wang-zhan/">网站</a>
+                                    </li>
+                                    <li>
+                                       <a href="./../tags/wordpress/">WordPress</a>
+                                    </li>
+                              </ul>
+                           </div>
+
+                        <div class="post__share">
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                        </div>
+                  </div>
+               </footer>
+
+         </div>
+      </article>
+
+
+
+
+   
+</main>
+   <footer class="footer">
+         <div class="footer__left">
+            
+               <div class="footer__copy">
+                  LITENOTE © 2022 &nbsp;|&nbsp;
+<a href="beian.miit.gov.cn target="_blank">蜀ICP备19040787号-2</a>
+               </div>
+         </div>
+      
+
+         <button
+            onclick="backToTopFunction()"
+            id="backToTop"
+            class="footer__bttop"
+            aria-label="Back to top"
+            title="Back to top">
+            <svg>
+               <use xlink:href="./../assets/svg/svg-map.svg#toparrow"/>
+            </svg>
+         </button>
+   </footer>
+</div>
+
+<script> window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', }; </script>
+
+<script defer src="./../assets/js/scripts.min.js?v=abc27c3e08d71a131b1f492b23530a68"></script>
+    <script>          
+      function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();
+    </script>
+
+
+
+
+
+
+</body>
+</html>
