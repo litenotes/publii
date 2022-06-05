@@ -9,6 +9,18 @@
         
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 
+				<script 
+				   async
+					defer 
+					type="text/javascript" 
+					src="https://u.notecore.net/umami.js"
+					data-website-id="2032917c-78fa-4e4b-8d80-e8bafaa9b6b8" 
+					data-auto-track="true"
+					data-do-not-track="true"
+					data-cache="true"
+					
+					></script>
+			
         <link rel="canonical" href="./../bo-ke-zhai-yao-mei-hua-xian-shi-gu-ding-xing-shu/">
         
         
@@ -16,7 +28,7 @@
         <link rel="stylesheet" href="./../assets/css/style.css?v=58c31bf42721da6fcdac7aedf11d1a37">       
         <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"./../bo-ke-zhai-yao-mei-hua-xian-shi-gu-ding-xing-shu/"},"headline":"博客摘要美化-显示固定行数","datePublished":"2022-01-09T11:23","dateModified":"2022-04-16T21:34","image":{"@type":"ImageObject","url":"./../media/posts/77/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg","height":1280,"width":1920},"description":"博客的首页摘要字数一直是个不好的设定。怎么设置都不好看，如果再加上一些一些英文字符，长短差异就更大。这里有一个方案，就是利用控制行数，截断文字的参数。 最好的例子，就是Ghost4.0版的默认主体Casper，主页非常稳定优雅，而且，似乎有点太规范了，经过仔细观察，我才发现，原来是每个文章卡片的摘要文字都是固定行数，而非固定字数。 通过浏览器的开发者工具去查看css代码，可以发现奥妙，原来是有一点新的参数。 这个参数简单 display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;word-break: break-word; 第一步，添加额外CSS代码 用同样的工具，找到你的WordPress主题的文章卡片摘要位置，定位css，然后在主题编辑器的额外CSS里面，先把原来主题的css代码复制过去，然后在}前面，把上述代码粘贴进去，就可以了。 比如，我此时此刻用的是Kadence主题，那么我的在额外CSS里面添加如下代码。 .loop-entry .entry-summary p, .loop-entry .entry-header .entry-meta { margin:&hellip;","author":{"@type":"Person","name":"litenote","url":"./../authors/litenote/"},"publisher":{"@type":"Organization","name":"litenote"}}</script>        
         
-        <script async defer data-website-id="2032917c-78fa-4e4b-8d80-e8bafaa9b6b8" src="https://u.notecore.net/umami.js"></script>
+        
     </head>
     <body class="lines">
         
